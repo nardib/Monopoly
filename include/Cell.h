@@ -18,7 +18,7 @@ class Cell
 {
 public:
 
-	//defualt constructor
+	//default constructor
 	Cell () : type {CellType::Void}, b {Building::None}, p1 {false}, p2 {false}, p3 {false}, p4 {false}, property_check {0} {}
 	Cell (CellType c);
     
