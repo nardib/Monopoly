@@ -3,7 +3,6 @@
 #include <iostream>
 
 //this function returns a number between 1 and max
-int throw_dice(int max);
 
 int main (void)
 {
