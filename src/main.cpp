@@ -1,3 +1,5 @@
+//file sviluppato da : Marco Spolverato 2032569
+
 #include <iostream>
 
 //this function returns a number between 1 and max
