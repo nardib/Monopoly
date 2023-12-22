@@ -20,16 +20,82 @@ void Cell::buy_property(int p)
 {
 	if(property_check == 0 && !(p < 1 || p > 4))
 		property_check = p;
-	throw std::invalid_argument("The player must be valid or the property is already bought");
+	else
+		throw std::invalid_argument("The player must be valid or the property is already bought");
 }
 
 //upgrade the building in that cell
 void Cell::upgrade_building()
 {	
-	//maybe i could upgrade it using static cast
-	if(b == Building::None)
-		b == Building::House;
-	if(b == Building::House)
-		b == Building::Hotel;
+	//if property is not owned I can't upgrade it
+	if(property_check != 0)
+	{
+		if(b == Building::None)
+			b = Building::House;
+		else if(b == Building::House)
+			b = Building::Hotel;
+	}
 }
 
+//overload operator<< for enum CellType
+std::ostream& operator<< (std::ostream& out, CellType c)
+{
+	switch (c)
+	{
+		case CellType::Start:
+			return out << 'P';
+			break;
+		case CellType::Void:
+			return out << ' ';
+			break;
+		case CellType::Economic:
+			return out << 'E';
+			break;
+		case CellType::Standard:
+			return out << 'S';
+			break;
+		case CellType::Luxury:
+			return out << 'L';
+			break;
+		default:
+			throw std::invalid_argument("invalid CellType");
+			break;
+	}
+	return out;
+}
+
+//overload operator<< for enum Building
+std::ostream& operator<< (std::ostream& out, Building b)
+{
+	switch (b)
+	{
+		case Building::None:
+			return out;
+			break;
+		case Building::House:
+			return out << '*';
+		case Building::Hotel:
+			return out << '^';
+			break;
+		default:
+			throw std::invalid_argument("invalid Building");
+			break;
+	}
+	return out;
+}
+
+//overload operator<< for class Cell
+std::ostream& operator<< (std::ostream& out, Cell cell)
+{
+	std::cout << "| ";
+	std::cout << cell.return_type() << cell.what_building();
+	if(cell.is_p1_here())
+		std::cout << '1';
+	if(cell.is_p2_here())
+		std::cout << '2';
+	if(cell.is_p3_here())
+		std::cout << '3';
+	if(cell.is_p4_here())
+		std::cout << '4';
+	return out << " |";
+}

@@ -5,6 +5,7 @@
 
 #include "Player.h"
 #include <stdexcept>
+#include <iostream>
 
 //these are the cell types available on the board
 enum class CellType
@@ -12,11 +13,17 @@ enum class CellType
   Start = 0, Void , Economic, Standard, Luxury
 };
 
+//overload operator<< for enum CellType
+std::ostream& operator<< (std::ostream& out, CellType c);
+
 //enum for hotel and house in a cell
 enum class Building
 {
 	None = 0, House, Hotel
 };
+
+//overload operator<< for enum Building
+std::ostream& operator<< (std::ostream& out, Building b);
 
 class Cell
 {
@@ -53,6 +60,6 @@ private:
 };
 
 //overload operator<<
-std::ostream& operator<< (std::ostream& out, Cell c);
+std::ostream& operator<< (std::ostream& out, Cell cell);
 
 #endif
