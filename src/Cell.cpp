@@ -15,3 +15,11 @@ Cell::Cell (CellType c) : type {c}, property_check {0}, p1 {false}, p2 {false}, 
 
 }
 
+//set the new owner
+void Cell::buy_property(int p)
+{
+	if(property_check == 0 && !(p < 1 || p > 4))
+		property_check = p;
+	throw std::invalid_argument("The player must be valid or the property is already bought");
+}
+

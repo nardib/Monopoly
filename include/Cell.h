@@ -1,6 +1,10 @@
 //made by: Lorenzo Nardin 2066609
 
+#ifndef CELL_H
+#define CELL_H
+
 #include "Player.h"
+#include <stdexcept>
 
 //these are the cell types available on the board
 enum class CellType
@@ -22,8 +26,8 @@ public:
 	Cell () : type {CellType::Void}, b {Building::None}, p1 {false}, p2 {false}, p3 {false}, p4 {false}, property_check {0} {}
 	Cell (CellType c);
     
-    //set the new owner
-    void buy_property();
+    //set the new owner; the argument request a number between 1 and 4 to set the property to another player
+    void buy_property(int player);
     
     //returns the owner, zero if not owned
     int return_owner() {return property_check;}
@@ -46,7 +50,7 @@ private:
   bool p1, p2, p3, p4;
   //member variable that tells if there's an house or an hotel
   Building b;
-
-  
-  //dovro' fare delle variabili per capire quali giocatori sono presenti nella cella quando andro' a stampare
 };
+
+
+#endif
