@@ -23,3 +23,13 @@ void Cell::buy_property(int p)
 	throw std::invalid_argument("The player must be valid or the property is already bought");
 }
 
+//upgrade the building in that cell
+void Cell::upgrade_building()
+{	
+	//maybe i could upgrade it using static cast
+	if(b == Building::None)
+		b == Building::House;
+	if(b == Building::House)
+		b == Building::Hotel;
+}
+

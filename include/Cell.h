@@ -38,7 +38,7 @@ public:
     bool is_p4_here() {return p4;}
     Building what_building() {return b;}
 
-    //upgrade the building
+    //upgrade the building, if building is an Hotel it does nothing
     void upgrade_building();
   
 private:
@@ -52,5 +52,7 @@ private:
   Building b;
 };
 
+//overload operator<<
+std::ostream& operator<< (std::ostream& out, Cell c);
 
 #endif
