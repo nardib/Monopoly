@@ -1,0 +1,8 @@
+Questo file lo useremo per le idee:
+
+-per il movimento del player nel tabellone si può fare così:
+	il player ha una funzione move(int i) che permette di muovere il giocatore di un tot di caselle
+	la classe board ha una funzione move_to(int i) che permette di spostare il giocatore semplicemente impostando su false la sua presenza nella cella precedente (n) e impostando true la sua presenza nella casella n+i 
+	quindi quando voglio muovere un player chiamo move, che a sua volta chiamerà move_to
+
+-si potrebbe implementare una classe Game per gestire tutte le dimaniche di gioco senza dover creare un main molto lungo

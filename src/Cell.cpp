@@ -89,13 +89,13 @@ std::ostream& operator<< (std::ostream& out, Cell cell)
 {
 	std::cout << "| ";
 	std::cout << cell.return_type() << cell.what_building();
-	if(cell.is_p1_here())
+	if(cell.p1)
 		std::cout << '1';
-	if(cell.is_p2_here())
+	if(cell.p2)
 		std::cout << '2';
-	if(cell.is_p3_here())
+	if(cell.p3)
 		std::cout << '3';
-	if(cell.is_p4_here())
+	if(cell.p4)
 		std::cout << '4';
 	return out << " |";
 }
