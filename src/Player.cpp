@@ -1,3 +1,5 @@
+//made by : Lorenzo Nardin 2066609
+
 #include "Player.h"
 
 //move this player in the board
