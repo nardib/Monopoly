@@ -26,7 +26,7 @@ public:
     void buy_property();
     
     //returns the owner, zero if not owned
-    Player return_owner() {return property_check;}
+    int return_owner() {return property_check;}
     CellType return_type() {return type;}
     bool is_p1_here() {return p1;}
     bool is_p2_here() {return p2;}
@@ -41,7 +41,7 @@ private:
   //cell type
   CellType type;
   //can i buy the property, if zero it's not already bought
-  Player property_check;
+  int property_check;
   //member variables that memorize the presence of a maximum of 4 player (probably i'm going to delete them)
   bool p1, p2, p3, p4;
   //member variable that tells if there's an house or an hotel
