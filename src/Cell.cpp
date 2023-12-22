@@ -37,6 +37,29 @@ void Cell::upgrade_building()
 	}
 }
 
+bool Cell::is_pn_here(int n)
+{
+	switch (n)
+	{
+	case 1:
+		return p1;
+		break;
+	case 2:
+		return p2;
+		break;
+	case 3:
+		return p3;
+		break;
+	case 4:
+		return p4;
+		break;
+	default:
+		throw std::invalid_argument("Number of player not valid");
+		break;
+	}
+	return false;
+}
+
 //overload operator<< for enum CellType
 std::ostream& operator<< (std::ostream& out, CellType c)
 {

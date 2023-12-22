@@ -3,7 +3,6 @@
 #ifndef CELL_H
 #define CELL_H
 
-#include "Player.h"
 #include <stdexcept>
 #include <iostream>
 
@@ -48,6 +47,9 @@ public:
     //p1 is first player, etc.
     //public to avoid the creation of two functions that wouldn't have check on them
     bool p1, p2, p3, p4;
+
+    //returns if player n is in this cell
+    bool is_pn_here(int n);
     //aggiungo dei const values per le fee e per il prezzo dei terreni
   
 private:
