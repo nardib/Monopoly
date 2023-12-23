@@ -12,6 +12,9 @@ class Board
 {
 public:
 
+	//default constructor
+	Board () {for (int i = 0; i < 28; i ++) board[i];}
+	
 	//moves in the board player_num n positions forward
 	void move_to(int player_num, int n);
 
@@ -22,5 +25,8 @@ private:
 	Cell board [SIZE];
 
 };
+
+//overload operator<< to print the board
+std::ostream& operator<< (std::ostream& out, Board b);
 
 #endif
