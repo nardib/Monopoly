@@ -8,7 +8,7 @@ void Player::move(int n, Board b)
 	b.move_to(player_num, n);
 }
 
-int Player::get_pos_in_board(Board b)
+int Player::get_pos_in_board(Board b) const
 {
 	for (int i = 0; i < SIZE; i++)
 	{

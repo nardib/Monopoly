@@ -24,6 +24,107 @@ void Cell::buy_property(int p)
 		throw std::invalid_argument("The player must be valid or the property is already bought");
 }
 
+//return terrain price for this cell
+int Cell::terrain_price() const
+{
+	switch (type)
+	{
+	case CellType::Economic:
+		return ECONOMIC_TERRAIN_PRICE;
+		break;
+	case CellType::Standard:
+		return STANDARD_TERRAIN_PRICE;
+		break;
+	case CellType::Luxury:
+		return LUXURY_TERRAIN_PRICE;
+		break;
+	default:
+		return 0;
+		break;
+	}
+	return 0;
+}
+
+//return house price for this cell
+int Cell::house_price() const
+{
+	switch (type)
+	{
+	case CellType::Economic:
+		return ECONOMIC_HOUSE_PRICE;
+		break;
+	case CellType::Standard:
+		return STANDARD_HOUSE_PRICE;
+		break;
+	case CellType::Luxury:
+		return LUXURY_HOUSE_PRICE;
+		break;
+	default:
+		return 0;
+		break;
+	}
+}
+
+//return hotel price for this cell
+int Cell::hotel_price() const
+{
+	switch (type)
+	{
+	case CellType::Economic:
+		return ECONOMIC_HOTEL_PRICE;
+		break;
+	case CellType::Standard:
+		return STANDARD_HOTEL_PRICE;
+		break;
+	case CellType::Luxury:
+		return LUXURY_HOTEL_PRICE;
+		break;
+	default:
+		return 0;
+		break;
+	}
+}
+
+//return accomodation price for this cell in an house
+int Cell::accomodation_house_price() const
+{
+	switch (type)
+	{
+	case CellType::Economic:
+		return ECONOMIC_ACCOMODATION_HOUSE_PRICE;
+		break;
+	case CellType::Standard:
+		return STANDARD_ACCOMODATION_HOUSE_PRICE;
+		break;
+	case CellType::Luxury:
+		return LUXURY_ACCOMODATION_HOUSE_PRICE;
+		break;
+	default:
+		return 0;
+		break;
+	}
+}
+
+//return accomodation price for this cell in an hotel
+int Cell::accomodation_hotel_price() const
+{
+	switch (type)
+	{
+	case CellType::Economic:
+		return ECONOMIC_ACCOMODATION_HOTEL_PRICE;
+		break;
+	case CellType::Standard:
+		return STANDARD_ACCOMODATION_HOTEL_PRICE;
+		break;
+	case CellType::Luxury:
+		return LUXURY_ACCOMODATION_HOTEL_PRICE;
+		break;
+	default:
+		return 0;
+		break;
+	}
+}
+
 //upgrade the building in that cell
 void Cell::upgrade_building()
 {	
@@ -37,7 +138,7 @@ void Cell::upgrade_building()
 	}
 }
 
-bool Cell::is_pn_here(int n)
+bool Cell::is_pn_here(int n) const
 {
 	switch (n)
 	{

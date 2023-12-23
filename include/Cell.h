@@ -6,6 +6,11 @@
 #include <stdexcept>
 #include <iostream>
 
+//const values per le fee e per il prezzo dei terreni
+const int ECONOMIC_TERRAIN_PRICE = 6, ECONOMIC_HOUSE_PRICE = 3, ECONOMIC_HOTEL_PRICE = 3, ECONOMIC_ACCOMODATION_HOUSE_PRICE = 2, ECONOMIC_ACCOMODATION_HOTEL_PRICE = 4;
+const int STANDARD_TERRAIN_PRICE = 10, STANDARD_HOUSE_PRICE = 5, STANDARD_HOTEL_PRICE = 5, STANDARD_ACCOMODATION_HOUSE_PRICE = 4, STANDARD_ACCOMODATION_HOTEL_PRICE = 8;
+const int LUXURY_TERRAIN_PRICE = 20, LUXURY_HOUSE_PRICE = 10, LUXURY_HOTEL_PRICE = 10, LUXURY_ACCOMODATION_HOUSE_PRICE = 7, LUXURY_ACCOMODATION_HOTEL_PRICE = 14;
+
 //these are the cell types available on the board
 enum class CellType
 {
@@ -32,25 +37,31 @@ public:
 	Cell () : type {CellType::Void}, b {Building::None}, p1 {false}, p2 {false}, p3 {false}, p4 {false}, property_check {0} {}
 	Cell (CellType c);
     
-    //set the new owner; the argument request a number between 1 and 4 to set the property to another player
-    void buy_property(int player);
-    
-    //returns the owner, zero if not owned
-    int return_owner() {return property_check;}
-    CellType return_type() {return type;}
-    Building what_building() {return b;}
+  //set the new owner; the argument request a number between 1 and 4 to set the property to another player
+  void buy_property(int player);
+  
+  //returns the owner, zero if not owned
+  int return_owner() const {return property_check;}
+  CellType return_type() const {return type;}
+  Building what_building() const {return b;}
 
-    //upgrade the building, if building is an Hotel it does nothing
-    void upgrade_building();
+  //returns prices for this cell
+  int terrain_price() const;
+  int house_price() const;
+  int hotel_price() const;
+  int accomodation_house_price() const;
+  int accomodation_hotel_price() const;
 
-    //member variables that memorize the presence of a maximum of 4 player
-    //p1 is first player, etc.
-    //public to avoid the creation of two functions that wouldn't have check on them
-    bool p1, p2, p3, p4;
+  //upgrade the building, if building is an Hotel it does nothing
+  void upgrade_building();
 
-    //returns if player n is in this cell
-    bool is_pn_here(int n);
-    //aggiungo dei const values per le fee e per il prezzo dei terreni
+  //member variables that memorize the presence of a maximum of 4 player
+  //p1 is first player, etc.
+  //public to avoid the creation of two functions that wouldn't have check on them
+  bool p1, p2, p3, p4;
+
+  //returns if player n is in this cell
+  bool is_pn_here(int n) const;
   
 private:
   //cell type
