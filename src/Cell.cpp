@@ -7,10 +7,10 @@ Cell::Cell (CellType c) : type {c}, property_check {0}, p1 {false}, p2 {false}, 
 {
 	if(c == CellType::Start)
 	{
-		p1 == true;
-		p2 == true;
-		p3 == true;
-		p4 == true;
+		p1 = true;
+		p2 = true;
+		p3 = true;
+		p4 = true;
 	}
 
 }
@@ -194,7 +194,7 @@ std::ostream& operator<< (std::ostream& out, Building b)
 	switch (b)
 	{
 		case Building::None:
-			return out;
+			return out << ' ';
 			break;
 		case Building::House:
 			return out << '*';
@@ -215,11 +215,19 @@ std::ostream& operator<< (std::ostream& out, Cell cell)
 	std::cout << cell.return_type() << cell.what_building();
 	if(cell.p1)
 		std::cout << '1';
+	else
+		std::cout << ' ';
 	if(cell.p2)
 		std::cout << '2';
+	else
+		std::cout << ' ';
 	if(cell.p3)
 		std::cout << '3';
+	else
+		std::cout << ' ';
 	if(cell.p4)
 		std::cout << '4';
+	else
+		std::cout << ' ';
 	return out << " |";
 }

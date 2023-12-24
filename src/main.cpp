@@ -11,7 +11,9 @@ int main (void)
 	c.p3 = true;
 	std::cout << c << std::endl;
 
-	Board b {};
+	Board b {8, 10, 6};
+	std::cout << b;
+	b.move_to(3, 35);
 	std::cout << b;
 
 	return 0;
