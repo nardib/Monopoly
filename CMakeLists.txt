@@ -9,7 +9,8 @@ add_library (${PROJECT_NAME} SHARED
 	src/Player.cpp
 	src/HumanPlayer.cpp
 	src/ComputerPlayer.cpp
-	src/Cell.cpp)
+	src/Cell.cpp
+	src/Game.cpp)
 
 add_executable (main src/main.cpp)
 
