@@ -33,13 +33,15 @@ protected:
 
 	//default constructor
 	Player () : balance {100}, player_num {0}, player_pos {0}, last_dice_throw {0} {}
-	//constructor with the number of the player
-	Player (int num) : balance {100}, player_num {num}, player_pos {0}, last_dice_throw {0} {if(player_num < 1 || player_num > 4) throw std::invalid_argument("Number of player must be between 1 and 4");}
+	//constructor with the number of the player and the board where it plays
+	Player (int num, Board b) : balance {100}, player_num {num}, player_pos {0}, last_dice_throw {0}, board {b}  {if(player_num < 1 || player_num > 4) throw std::invalid_argument("Number of player must be between 1 and 4");}
 
 private:
 
 	//amount of money this player has; number of player; player position in the board
 	int balance, player_num, player_pos, last_dice_throw;
+	//board where this Player plays
+	Board b;
 
 };
 

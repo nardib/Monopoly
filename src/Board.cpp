@@ -1,4 +1,4 @@
-//made by : 
+//made by : Lorenzo Nardin 2066609
 
 #include "Board.h"
 

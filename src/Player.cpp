@@ -10,10 +10,20 @@ void Player::move(int n, Board b)
 
 int Player::get_pos_in_board(Board b) const
 {
-	for (int i = 0; i < SIZE; i++)
+	switch (player_num)
 	{
-		if(b.get_value(i).is_pn_here(player_num))
-			return i;
+	case 1:
+		return b.p1();
+		break;
+	case 2:
+		return b.p2();
+		break;
+	case 3:
+		return b.p3();
+		break;
+	case 4:
+		return b.p4();
+		break;
 	}
 	throw std::out_of_range("This player is not in the board");
 }
