@@ -34,6 +34,10 @@ public:
 	void decrease_balance (int n);
 	void increase_balance (int n);
 
+	//virtual functions that must be overrided (they )
+	virtual bool buy_this_property() = 0;	//this function returns true if the player would buy this property
+	virtual bool upgrade_this_building() = 0;	//this function returns true if the player wants to upgrade the building in this cell
+
 	//copy construcor and assignment disabled
 	Player (const Player&) = delete;
 	Player& operator= (const Player&) = delete;
