@@ -5,4 +5,8 @@ Questo file lo useremo per le idee:
 	la classe board ha una funzione move_to(int i) che permette di spostare il giocatore semplicemente impostando su false la sua presenza nella cella precedente (n) e impostando true la sua presenza nella casella n+i 
 	quindi quando voglio muovere un player chiamo move, che a sua volta chiamerà move_to
 
--si potrebbe implementare una classe Game per gestire tutte le dimaniche di gioco senza dover creare un main molto lungo
+-si potrebbe implementare una classe Game per gestire tutte le dimaniche di gioco senza dover creare un main molto lungo; questa classe gestisce tutte le dinamiche di gioco, interagendo direttamente con i Player
+
+-per l'implementazione della classe HumanPlayer probabilmente non c'è molto da aggiungere, se non la possibilità di compare o no una proprietà nella board oppure di migliorare le costruzioni in una cell che possiede (queste 2 funzioni devono interagire con la classe board attraverso apposite funzioni)
+
+-per l'implementazione della classe ComputerPlayer bisogna aggiungere funzioni per la scelta autonoma della stesse funzioni che ha HumanPlayer, con un 25% di probabilità di eseguire una determinata operazione (ad esempio ha il 25% di probabilità di comprare una casa o di costruire case/alberghi su di essa)

@@ -9,6 +9,11 @@ class Player
 {
 public:
 
+	class NotEnoughMoney : public std::runtime_error 
+	{
+	public:  NotEnoughMoney(const std::string& message): std::runtime_error(message) {}
+	};
+
 	//these functions return the values of the member variables
 	int budget() const {return balance;}
 	int num() const {return player_num;}
@@ -16,14 +21,18 @@ public:
 	int last_dice() const {return last_dice_throw;}
 
 	//move this player in the board n positions forward
-	void move(int n, Board b);
+	void move(int n);
 
 	//get pos in the board; return the index in the array of the board
 	//it does a linear search in the array and memorize that value in a variable
-	int get_pos_in_board(Board b) const;
+	int get_pos_in_board();
 
 	//function to throw two dices (and a third if the two previous results are the same)
 	int throw_dices();
+
+	//functions to modify the balance
+	void decrease_balance (int n);
+	void increase_balance (int n);
 
 	//copy construcor and assignment disabled
 	Player (const Player&) = delete;
@@ -41,7 +50,7 @@ private:
 	//amount of money this player has; number of player; player position in the board
 	int balance, player_num, player_pos, last_dice_throw;
 	//board where this Player plays
-	Board b;
+	Board board;
 
 };
 
