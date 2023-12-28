@@ -28,9 +28,6 @@ public:
 	//it does a linear search in the array and memorize that value in a variable
 	int get_pos_in_board();
 
-	//function to throw two dices (and a third if the two previous results are the same)
-	int throw_dices();
-
 	//functions to modify the balance
 	void decrease_balance (int n);
 	void increase_balance (int n);
