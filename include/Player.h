@@ -58,7 +58,6 @@ private:
 	Board board;
 	//tells if this player is playing or not
 	bool playing;
-
 };
 
 #endif
