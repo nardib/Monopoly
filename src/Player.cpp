@@ -28,25 +28,6 @@ int Player::get_pos_in_board()
 	throw std::out_of_range("This player is not in the board");
 }
 
-//this function returns a number between 1 and max (used in throw_dices)
-int throw_dice(int max)
-{
-	return (rand() % max) + 1;
-}
-
-int Player::throw_dices()
-{
-	int n1 = throw_dice(6);
-	int n2 = throw_dice(6);
-	int tot = n1  + n2;
-
-	if(n1 == n2)
-		tot += throw_dice(6);
-
-	last_dice_throw = tot;
-	return last_dice_throw;
-}
-
 void Player::decrease_balance (int n)
 {
 	if (n < 0)
