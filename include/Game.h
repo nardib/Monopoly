@@ -4,6 +4,10 @@
 #define GAME_H
 
 #include "Player.h"
+#include "HumanPlayer.h"
+#include "ComputerPlayer.h"
+#include <algorithm>
+#include <vector>
 
 class Game
 {
@@ -12,8 +16,10 @@ class Game
      //constructor
      Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board bo);
 
+     Game(HumanPlayer& pl1, HumanPlayer& pl2, HumanPlayer& pl3, HumanPlayer& pl4, Board bo):p1{&pl1},p2{&pl2},p3{&pl3},p4{&pl4},b{bo}{}
+
      //function to choose starting player
-     int starting_player();
+     std::vector<int> player_order();
 
      //function to handle crossing the "go" cell
      void cross_go(Player& p);
@@ -25,7 +31,10 @@ class Game
      void reset_properties(int player_num);
 
      //function to throw two dices, or more in case they are doubles
-     int throw_dices();
+     std::pair<int, int> throw_dices();
+
+     //function to check if the dices are equal, if so, throws them again
+     void check_dices();
 
      private:
      

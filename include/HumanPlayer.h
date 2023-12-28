@@ -9,6 +9,9 @@ class HumanPlayer : public Player
 {
 
 public:
+
+    HumanPlayer (int n, Board b):Player(n, b){}
+    
     bool buy_this_property() override;
 
     bool upgrade_this_building() override;
