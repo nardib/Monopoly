@@ -14,5 +14,4 @@ public:
     bool upgrade_this_building() override;
 };
 
-
 #endif
