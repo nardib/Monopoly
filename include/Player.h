@@ -28,6 +28,7 @@ public:
 	//it does a linear search in the array and memorize that value in a variable
 	int get_pos_in_board();
 
+
 	//functions to modify the balance
 	void decrease_balance (int n);
 	void increase_balance (int n);
