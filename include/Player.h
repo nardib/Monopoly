@@ -19,6 +19,7 @@ public:
 	int num() const {return player_num;}
 	int pos() const {return player_pos;}
 	int last_dice() const {return last_dice_throw;}
+	bool is_playing() const {return playing;}
 
 	//move this player in the board n positions forward
 	void move(int n);
@@ -33,6 +34,9 @@ public:
 	//functions to modify the balance
 	void decrease_balance (int n);
 	void increase_balance (int n);
+
+	//i change the value of this player to false; once it turns to false, it can't become true anymore
+	void end_game() {playing = false;}
 
 	//virtual functions that must be overrided (they )
 	virtual bool buy_this_property() = 0;	//this function returns true if the player would buy this property
@@ -55,6 +59,8 @@ private:
 	int balance, player_num, player_pos, last_dice_throw;
 	//board where this Player plays
 	Board board;
+	//tells if this player is playing or not
+	bool playing;
 
 };
 
