@@ -117,6 +117,14 @@ void Board::move_to(int p, int n)
 	
 }
 
+//function that returns the value of the i element in the board (it has a check of the bounds)
+Cell Board::get_value(int i)
+{
+	if (i < 0 || i >= SIZE)
+		throw std::invalid_argument("This is not an element of the board");
+	return board[i];
+}
+
 //print the board correctly via std::cout
 std::ostream& operator<< (std::ostream& out, Board b)
 {
