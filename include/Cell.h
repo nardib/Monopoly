@@ -39,6 +39,8 @@ public:
     
   //set the new owner; the argument request a number between 1 and 4 to set the property to another player
   void buy_property(int player);
+
+  void sell_property();
   
   //returns the owner, zero if not owned
   int return_owner() const {return property_check;}

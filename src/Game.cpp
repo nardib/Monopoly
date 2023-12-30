@@ -62,6 +62,17 @@ void Game::move_player(Player& p,int n)
     p.move(n);
 }
 
+void Game::reset_properties(Player& p, Board b)
+{
+    for(int i=0; i< 28; i++)
+    {
+        if(b.get_value(i).return_owner()==(p.num()))
+        {
+            b.get_value(i).sell_property();
+        }
+    }
+}
+
 std::pair<int, int> Game::throw_dices()
 {
     dice1=throw_dice(6);

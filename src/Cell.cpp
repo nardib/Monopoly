@@ -24,6 +24,11 @@ void Cell::buy_property(int p)
 		throw std::invalid_argument("The player must be valid or the property is already bought");
 }
 
+void Cell::sell_property()
+{
+	
+}
+
 //return terrain price for this cell
 int Cell::terrain_price() const
 {

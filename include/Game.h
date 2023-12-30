@@ -28,7 +28,7 @@ class Game
      void move_player(Player& p, int n);
 
      //function to remove a defeated player's properties
-     void reset_properties(int player_num);
+     void reset_properties(Player& p, Board b);
 
      //function to throw two dices, or more in case they are doubles
      std::pair<int, int> throw_dices();
