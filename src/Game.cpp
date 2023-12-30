@@ -2,16 +2,6 @@
 
 #include "Game.h"
 
-//constructor
-Game::Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board* bo)
-{
-    p1=pl1;
-    p2=pl2;
-    p3=pl3;
-    p4=pl4;
-    b=bo;
-}
-
 bool comp(int a, int b)
 {
     return(a<b);

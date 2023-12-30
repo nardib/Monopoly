@@ -14,9 +14,7 @@ class Game
     public:
      
      //constructor
-     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo);
-
-     Game(HumanPlayer* pl1, ComputerPlayer* pl2, ComputerPlayer* pl3, ComputerPlayer* pl4, Board *bo):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo}{}
+     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo}{}
 
      //function to choose starting player
      std::vector<int> player_order();
