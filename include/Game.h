@@ -16,7 +16,7 @@ class Game
      //constructor
      Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board bo);
 
-     Game(HumanPlayer& pl1, HumanPlayer& pl2, HumanPlayer& pl3, HumanPlayer& pl4, Board bo):p1{&pl1},p2{&pl2},p3{&pl3},p4{&pl4},b{bo}{}
+     Game(HumanPlayer& pl1, ComputerPlayer& pl2, ComputerPlayer& pl3, ComputerPlayer& pl4, Board bo):p1{&pl1},p2{&pl2},p3{&pl3},p4{&pl4},b{bo}{}
 
      //function to choose starting player
      std::vector<int> player_order();
@@ -25,16 +25,30 @@ class Game
      void cross_go(Player& p);
 
      //function to move the player
-     void move_player(Player& p, int n);
+     void move_player(Player* p, int n);
 
      //function to remove a defeated player's properties
-     void reset_properties(Player& p, Board b);
+     void reset_properties(Player& p);
+
+     //function to buy a terrain
+     void buy_terrain(Player& p);
+
+     //function to upgrade a building
+     void upgrade(Player& p);
+
+     //
+     Player* return_player(int n);
+
+     //function to pay the stay at another player's property
+     bool pay_stay(Player& p);
 
      //function to throw two dices, or more in case they are doubles
      std::pair<int, int> throw_dices();
 
-     //function to check if the dices are equal, if so, throws them again
-     void check_dices();
+     //function to check if the dices are equal
+     bool check_dices();
+
+     void game();
 
      private:
      

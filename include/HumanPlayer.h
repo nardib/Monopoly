@@ -14,10 +14,10 @@ public:
     HumanPlayer (int n, Board b):Player(n, b){}
 
     //function that checks if you want to buy the property 
-    bool buy_this_property() override;
+    bool buy_intent() override;
 
     //function that checks if you want to upgrade the building
-    bool upgrade_this_building() override;
+    bool upgrade_intent() override;
     
 };
 
