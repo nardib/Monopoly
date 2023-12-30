@@ -26,7 +26,9 @@ void Cell::buy_property(int p)
 
 void Cell::sell_property()
 {
-	
+	if(property_check == 0)
+		throw Cell::PropertyNotBought("This property is not bought, so it can't be sold by a player");
+	property_check = 0;
 }
 
 //return terrain price for this cell

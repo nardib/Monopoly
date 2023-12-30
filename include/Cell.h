@@ -33,6 +33,12 @@ class Cell
 {
 public:
 
+  //class to throw an error if a property is not bought
+  class PropertyNotBought : public std::runtime_error 
+  {
+  public:  NotEnoughMoney(const std::string& message): std::runtime_error(message) {}
+  };
+
 	//default constructor
 	Cell () : type {CellType::Void}, b {Building::None}, p1 {false}, p2 {false}, p3 {false}, p4 {false}, property_check {0} {}
 	Cell (CellType c);
