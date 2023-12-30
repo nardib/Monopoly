@@ -3,7 +3,7 @@
 #include "Game.h"
 
 //constructor
-Game::Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board bo)
+Game::Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board* bo)
 {
     p1=pl1;
     p2=pl2;
@@ -55,10 +55,10 @@ std::vector<int> Game::player_order()
     return finalOrder;
 }
 
-void Game::cross_go(Player& p)
+void Game::cross_go(Player* p)
 {
-    p.increase_balance(20);
-    std::cout<<"Giocatore "<< p.num()<< " è passato dal via e ha ritirato 20 fiorini.\n";
+    p->increase_balance(20);
+    std::cout<<"Giocatore "<< p->num()<< " è passato dal via e ha ritirato 20 fiorini.\n";
 }
 
 void Game::move_player(Player* p,int n)
@@ -67,39 +67,39 @@ void Game::move_player(Player* p,int n)
     std::cout<<"Giocatore "<< p->num()<< " e' arrivato alla casella "<< p->pos()<< ".\n";
 }
 
-void Game::reset_properties(Player& p)
+void Game::reset_properties(Player* p)
 {
     for(int i=0; i< 28; i++)
     {
-        if(b.get_value(i).return_owner()==(p.num()))
+        if(b->get_value(i).return_owner()==(p->num()))
         {
-            b.get_value(i).sell_property();
+            b->get_value(i).sell_property();
         }
     }
-    std::cout<<"Giocatore "<< p.num()<< " ha donato le sue proprietà alla banca in seguito alla bancarotta.\n";
+    std::cout<<"Giocatore "<< p->num()<< " ha donato le sue proprietà alla banca in seguito alla bancarotta.\n";
 }
 
-void Game::buy_terrain(Player& p)
+void Game::buy_terrain(Player* p)
 {
-    if(p.buy_intent())
+    if(p->buy_intent())
     {
-        (b.get_value(p.pos())).buy_property(p.num());
+        (b->get_value(p->pos())).buy_property(p->num());
     }
-    std::cout<<"Giocatore "<< p.num()<< " ha acquistato il terreno "<< p.pos()<<".\n";
+    std::cout<<"Giocatore "<< p->num()<< " ha acquistato il terreno "<< p->pos()<<".\n";
 }
 
-void Game::upgrade(Player& p)
+void Game::upgrade(Player* p)
 {
-    if(p.upgrade_intent() || (b.get_value(p.pos())).return_owner()==p.num())
+    if(p->upgrade_intent() || (b->get_value(p->pos())).return_owner()==p->num())
     {
-        (b.get_value(p.pos())).upgrade_building();
-        if((b.get_value(p.pos())).building_type()==Building::House)
+        (b->get_value(p->pos())).upgrade_building();
+        if((b->get_value(p->pos())).building_type()==Building::House)
         {
-            std::cout<<"Giocatore "<< p.num()<< " ha costruito una casa sul terreno "<< p.pos()<<".";
+            std::cout<<"Giocatore "<< p->num()<< " ha costruito una casa sul terreno "<< p->pos()<<".";
         }
-        if((b.get_value(p.pos())).building_type()==Building::Hotel)
+        if((b->get_value(p->pos())).building_type()==Building::Hotel)
         {
-            std::cout<<"Giocatore "<< p.num()<< " ha migliorato una casa in albergo sul terreno "<< p.pos()<< ".";
+            std::cout<<"Giocatore "<< p->num()<< " ha migliorato una casa in albergo sul terreno "<< p->pos()<< ".";
         }
     }
 }
@@ -125,41 +125,41 @@ Player* Game::return_player(int n)
     throw std::invalid_argument("The player is not on the board");
 }
 
-bool Game::pay_stay(Player& p)
+bool Game::pay_stay(Player* p)
 {
-    if((b.get_value(p.pos())).return_owner()==0 && (b.get_value(p.pos())).return_owner()==p.num())
+    if((b->get_value(p->pos())).return_owner()==0 && (b->get_value(p->pos())).return_owner()==p->num())
     {
-        if((b.get_value(p.pos())).building_type()==Building::House)
+        if((b->get_value(p->pos())).building_type()==Building::House)
         {
-            if(p.budget()>((b.get_value(p.pos())).accomodation_house_price()))
+            if(p->budget()>((b->get_value(p->pos())).accomodation_house_price()))
             {
-                p.decrease_balance((b.get_value(p.pos())).accomodation_house_price());
-                (return_player(b.get_value(p.pos()).return_owner()))->increase_balance((b.get_value(p.pos())).accomodation_house_price());
-                std::cout<<"Giocatore "<< p.num()<< " ha pagato "<< ((b.get_value(p.pos())).accomodation_house_price())<< " fiorini a giocatore "<< (b.get_value(p.pos()).return_owner())<< " per pernottamento nella casella "<< p.pos()<< ".\n";
+                p->decrease_balance((b->get_value(p->pos())).accomodation_house_price());
+                (return_player(b->get_value(p->pos()).return_owner()))->increase_balance((b->get_value(p->pos())).accomodation_house_price());
+                std::cout<<"Giocatore "<< p->num()<< " ha pagato "<< ((b->get_value(p->pos())).accomodation_house_price())<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento nella casella "<< p->pos()<< ".\n";
                 return true;
             }
             else
             {
-                std::cout<<"Giocatore "<< p.num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b.get_value(p.pos()).return_owner())<< " e ha speso gli ultimi "<< p.budget()<< " fiorini.\n";
-                p.decrease_balance(p.budget());
-                (return_player(b.get_value(p.pos()).return_owner()))->increase_balance(p.budget());
+                std::cout<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
+                p->decrease_balance(p->budget());
+                (return_player(b->get_value(p->pos()).return_owner()))->increase_balance(p->budget());
                 return false;
             }
         }
-        if((b.get_value(p.pos())).building_type()==Building::Hotel)
+        if((b->get_value(p->pos())).building_type()==Building::Hotel)
         {
-            if(p.budget()>((b.get_value(p.pos())).accomodation_hotel_price()))
+            if(p->budget()>((b->get_value(p->pos())).accomodation_hotel_price()))
             {
-                p.decrease_balance((b.get_value(p.pos())).accomodation_hotel_price());
-                (return_player(b.get_value(p.pos()).return_owner()))->increase_balance((b.get_value(p.pos())).accomodation_hotel_price());
-                std::cout<<"Giocatore "<< p.num()<< " ha pagato "<< (b.get_value(p.pos())).accomodation_hotel_price()<< " fiorini a giocatore "<< (b.get_value(p.pos()).return_owner())<< " per pernottamento nella casella "<< p.pos()<< ".\n";
+                p->decrease_balance((b->get_value(p->pos())).accomodation_hotel_price());
+                (return_player(b->get_value(p->pos()).return_owner()))->increase_balance((b->get_value(p->pos())).accomodation_hotel_price());
+                std::cout<<"Giocatore "<< p->num()<< " ha pagato "<< (b->get_value(p->pos())).accomodation_hotel_price()<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento nella casella "<< p->pos()<< ".\n";
                 return true;
             }
             else
             {
-                std::cout<<"Giocatore "<< p.num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b.get_value(p.pos()).return_owner())<< " e ha speso gli ultimi "<< p.budget()<< " fiorini.\n";
-                p.decrease_balance(p.budget());
-                (return_player(b.get_value(p.pos()).return_owner()))->increase_balance(p.budget());
+                std::cout<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
+                p->decrease_balance(p->budget());
+                (return_player(b->get_value(p->pos()).return_owner()))->increase_balance(p->budget());
                 return false;
             }
         }
@@ -182,61 +182,62 @@ bool Game::check_dices()
 void Game::game()
 {
     bool done=false;
-    std::vector<int> po = player_order();
+    //std::vector<int> po = player_order();
     int player_count=4;
     int turn_count=0;
     Player* curr;
     while(!done)
     {
-        for(int i=0; i<4; i++)
+        for(int i=1; i<5; i++)
         {
-            std::cout<<b;
-            bool in_turn=false;
-            if(return_player(po[i])->is_playing())
+            std::cout<<*b;
+            bool in_turn=true;
+            /*if(return_player(po.at(i))->is_playing())
             {    
-                curr= return_player(po[i]);
+                curr= return_player(po.at(i));
                 in_turn=true;
-            }
+            }*/
+            curr= return_player(i);
             if(player_count==1)
             {
-                i=4;
+                i=5;
                 std::cout<< "Giocatore "<< curr->num()<< " ha vinto la partita.\n";
                 done=true;
             }
-            //while(in_turn)
-            //{
+            while(in_turn)
+            {
+                std::pair<int, int> dices = throw_dices();
+                std::cout<<"Giocatore "<< curr->num()<< " ha tirato i dadi ottenendo un valore di "<< dices.first<<" + "<< dices.second<< " = "<< dices.first+dices.second<< ".\n";
                 if(check_dices() || turn_count>0)
                 {
                     std::cout<< "Giocatore "<< curr->num()<< " ha ottenuto un lancio doppio e svolgera' un altro turno.\n";
                 }
-                std::pair<int, int> dices = throw_dices();
-                std::cout<<"Giocatore "<< curr->num()<< " ha tirato i dadi ottenendo un valore di "<< dices.first<<" + "<< dices.second<< " = "<< dices.first+dices.second<< ".\n";
-                in_turn=check_dices();
+                in_turn = check_dices();
                 int start_pos= curr->pos();
                 move_player(curr, (dices.first + dices.second));
                 int end_pos= curr->pos();
                 if(end_pos<start_pos)
                 {
-                    cross_go(*curr);
+                    cross_go(curr);
                 }
-                buy_terrain(*curr);
-                upgrade(*curr);
-                if(!pay_stay(*curr))
+                buy_terrain(curr);
+                upgrade(curr);
+                if(!pay_stay(curr))
                 {
                     player_count--;
                     std::cout<<"Giocatore " << curr->num() << " e' stato eliminato.";
                 }
-            //}
-            std::cout<<"Giocatore " << curr->num() << " ha finito il turno.";
-            if(i==3)
+            }
+            std::cout<<"Giocatore " << curr->num() << " ha finito il turno.\n";
+            if(i==4)
             {
-                i==0;
+                i==1;
             }
             if(turn_count>100)
             {
                 int richest;
                 int winner;
-                for(int i=0;i<4; i++)
+                for(int i=1;i<5; i++)
                 {
                     if(curr->budget()>richest)
                     {
@@ -244,7 +245,7 @@ void Game::game()
                         winner=curr->num();
                     }
                 }
-                i=4;
+                i=5;
                 done=true;
             }
         }

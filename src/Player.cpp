@@ -5,7 +5,8 @@
 //move this player in the board
 void Player::move(int n)
 {
-	board.move_to(player_num, n);
+	board->move_to(player_num, n);
+	player_pos = get_pos_in_board();
 }
 
 int Player::get_pos_in_board() 
@@ -13,16 +14,16 @@ int Player::get_pos_in_board()
 	switch (player_num)
 	{
 	case 1:
-		return board.p1();
+		return board->p1();
 		break;
 	case 2:
-		return board.p2();
+		return board->p2();
 		break;
 	case 3:
-		return board.p3();
+		return board->p3();
 		break;
 	case 4:
-		return board.p4();
+		return board->p4();
 		break;
 	}
 	throw std::out_of_range("This player is not in the board");

@@ -11,7 +11,7 @@ class HumanPlayer : public Player
 public:
 
     //default constructor
-    HumanPlayer (int n, Board b):Player(n, b){}
+    HumanPlayer (int n, Board* b):Player(n, b){}
 
     //function that checks if you want to buy the property 
     bool buy_intent() override;

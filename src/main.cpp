@@ -5,11 +5,11 @@
 int main (void)
 {
 	Board b {8, 10, 6};
-	HumanPlayer p1(1, b);
-	ComputerPlayer p2(2, b);
-	ComputerPlayer p3(3, b);
-	ComputerPlayer p4(4, b);
-	Game g(p1, p2, p3, p4, b);
+	HumanPlayer p1(1, &b);
+	ComputerPlayer p2(2, &b);
+	ComputerPlayer p3(3, &b);
+	ComputerPlayer p4(4, &b);
+	Game g(&p1, &p2, &p3, &p4, &b);
 	g.game();
 	Cell c {static_cast<CellType>(3)};
 	c.buy_property(4);
