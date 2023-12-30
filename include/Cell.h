@@ -36,7 +36,7 @@ public:
   //class to throw an error if a property is not bought
   class PropertyNotBought : public std::runtime_error 
   {
-  public:  NotEnoughMoney(const std::string& message): std::runtime_error(message) {}
+  public:  PropertyNotBought(const std::string& message): std::runtime_error(message) {}
   };
 
 	//default constructor
