@@ -46,6 +46,7 @@ public:
   //set the new owner; the argument request a number between 1 and 4 to set the property to another player
   void buy_property(int player);
 
+  //function to sell this cell if the player that bought this is no more playing
   void sell_property();
   
   //returns the owner, zero if not owned

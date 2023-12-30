@@ -18,7 +18,6 @@ public:
 	int budget() const {return balance;}
 	int num() const {return player_num;}
 	int pos() const {return player_pos;}
-	int last_dice() const {return last_dice_throw;}
 	bool is_playing() const {return playing;}
 
 	//move this player in the board n positions forward
@@ -27,7 +26,6 @@ public:
 	//get pos in the board; return the index in the array of the board
 	//it does a linear search in the array and memorize that value in a variable
 	int get_pos_in_board();
-
 
 	//functions to modify the balance
 	void decrease_balance (int n);
@@ -54,7 +52,7 @@ protected:
 private:
 
 	//amount of money this player has; number of player; player position in the board
-	int balance, player_num, player_pos, last_dice_throw;
+	int balance, player_num, player_pos;
 	//board where this Player plays
 	Board board;
 	//tells if this player is playing or not
