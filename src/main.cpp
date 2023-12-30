@@ -16,7 +16,7 @@ int main (void)
 	std::cout << b;
 	b.move_to(3, 35);
 	std::cout << b;
-	std::cout << b.get_value(0) << std::endl;
+	std::cout << b.get_value() << std::endl;
 
 	HumanPlayer p1(1, b);
 	HumanPlayer p2(2, b);
