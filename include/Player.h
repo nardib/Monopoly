@@ -35,8 +35,8 @@ public:
 	void end_game() {playing = false;}
 
 	//virtual functions that must be overrided (they )
-	virtual bool buy_this_property() = 0;	//this function returns true if the player would buy this property
-	virtual bool upgrade_this_building() = 0;	//this function returns true if the player wants to upgrade the building in this cell
+	virtual bool buy_intent() = 0;	//this function returns true if the player would buy this property
+	virtual bool upgrade_intent() = 0;	//this function returns true if the player wants to upgrade the building in this cell
 
 	//copy construcor and assignment disabled
 	Player (const Player&) = delete;

@@ -28,13 +28,25 @@ class Game
      void move_player(Player& p, int n);
 
      //function to remove a defeated player's properties
-     void reset_properties(Player& p, Board b);
+     void reset_properties(Player& p);
+
+     //function to buy a terrain
+     void buy_terrain(Player& p);
+
+     //function to upgrade a building
+     void upgrade(Player& p);
+
+     //
+     Player& return_player(int n);
+
+     //function to pay the stay at another player's property
+     void pay_stay(Player& p);
 
      //function to throw two dices, or more in case they are doubles
      std::pair<int, int> throw_dices();
 
-     //function to check if the dices are equal, if so, throws them again
-     void check_dices();
+     //function to check if the dices are equal
+     bool check_dices();
 
      private:
      

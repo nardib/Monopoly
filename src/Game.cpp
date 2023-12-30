@@ -62,13 +62,75 @@ void Game::move_player(Player& p,int n)
     p.move(n);
 }
 
-void Game::reset_properties(Player& p, Board b)
+void Game::reset_properties(Player& p)
 {
     for(int i=0; i< 28; i++)
     {
         if(b.get_value(i).return_owner()==(p.num()))
         {
             b.get_value(i).sell_property();
+        }
+    }
+}
+
+void Game::buy_terrain(Player& p)
+{
+    if(p.buy_intent())
+    {
+        (b.get_value(p.pos())).buy_property(p.num());
+    }
+}
+
+void Game::upgrade(Player& p)
+{
+    if(p.upgrade_intent() || (b.get_value(p.pos())).return_owner()==p.num())
+    {
+        (b.get_value(p.pos())).upgrade_building();
+        if((b.get_value(p.pos())).building_type()==Building::House)
+        {
+
+        }
+        if((b.get_value(p.pos())).building_type()==Building::Hotel)
+        {
+
+        }
+    }
+}
+
+Player& Game::return_player(int n)
+{
+	if(n==1)
+    {
+        return *p1;
+    }
+    if(n==2)
+    {
+        return *p2;
+    }
+    if(n==3)
+    {
+        return *p3;
+    }
+    if(n==4)
+    {
+        return *p4;
+    }
+    throw std::invalid_argument("The player is not on the board");
+}
+
+void Game::pay_stay(Player& p)
+{
+    if((b.get_value(p.pos())).return_owner()==0 && (b.get_value(p.pos())).return_owner()==p.num())
+    {
+        if((b.get_value(p.pos())).building_type()==Building::House)
+        {
+            p.decrease_balance((b.get_value(p.pos())).accomodation_house_price());
+            (return_player(b.get_value(p.pos()).return_owner())).increase_balance((b.get_value(p.pos())).accomodation_house_price());
+        }
+        if((b.get_value(p.pos())).building_type()==Building::Hotel)
+        {
+            p.decrease_balance((b.get_value(p.pos())).accomodation_hotel_price());
+            (return_player(b.get_value(p.pos()).return_owner())).increase_balance((b.get_value(p.pos())).accomodation_hotel_price());
         }
     }
 }
@@ -80,8 +142,7 @@ std::pair<int, int> Game::throw_dices()
     return {dice1, dice2};
 }
 
-void Game::check_dices()
+bool Game::check_dices()
 {
-    if(dice1==dice2)
-        throw_dices();
+    return(dice1==dice2);
 }

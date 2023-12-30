@@ -220,7 +220,7 @@ std::ostream& operator<< (std::ostream& out, Building b)
 std::ostream& operator<< (std::ostream& out, Cell cell)
 {
 	std::cout << "| ";
-	std::cout << cell.return_type() << cell.what_building();
+	std::cout << cell.return_type() << cell.building_type();
 	if(cell.p1)
 		std::cout << '1';
 	else

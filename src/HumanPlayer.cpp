@@ -2,7 +2,7 @@
 
 #include "HumanPlayer.h"
 
-bool HumanPlayer::buy_this_property() {
+bool HumanPlayer::buy_intent() {
         // Implement the logic for buying the property
         std::string answer;
         do{
@@ -16,7 +16,7 @@ bool HumanPlayer::buy_this_property() {
         return (answer == "s");
 }
 
- bool HumanPlayer::upgrade_this_building() {
+ bool HumanPlayer::upgrade_intent() {
         // Implement the logic for upgrading the building
         std::string answer;
         do{

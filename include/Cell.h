@@ -52,7 +52,7 @@ public:
   //returns the owner, zero if not owned
   int return_owner() const {return property_check;}
   CellType return_type() const {return type;}
-  Building what_building() const {return b;}
+  Building building_type() const {return b;}
 
   //returns prices for this cell
   int terrain_price() const;
