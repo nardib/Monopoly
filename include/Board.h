@@ -4,6 +4,7 @@
 #define BOARD_H
 
 #include "Cell.h"
+#include <random>
 
 //board size
 const int SIZE = 28;

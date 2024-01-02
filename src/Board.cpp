@@ -2,6 +2,20 @@
 
 #include "Board.h"
 
+//function that returns a random number between min and max 
+int random(int min, int max)
+{
+	//seed the random number generator
+	std::random_device rd;
+	std::mt19937 gen(rd());
+
+	//create a distribution for this range
+	std::uniform_int_distribution<> distribution(min, max);
+
+	//return a random number between min and max
+	return distribution(gen);
+}
+
 Board::Board(int n_eco, int n_std, int n_lux) : p1_pos {0}, p2_pos {0}, p3_pos {0}, p4_pos{0}
 {
 	if(n_eco + n_std + n_lux != 24)
@@ -25,7 +39,7 @@ Board::Board(int n_eco, int n_std, int n_lux) : p1_pos {0}, p2_pos {0}, p3_pos {
 		//i choose randomly the configuration of the cells in the board, but respecting the defined number of cells for every type
 		while (!is_set)
 		{
-			int rnd = rand() % 3;
+			int rnd = random(0, 2);
 			if (rnd == 0 && eco_count < n_eco)
 			{
 				board[i] = (CellType::Economic);
