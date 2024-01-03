@@ -1,4 +1,4 @@
-//made by Marco SPolverato 2032569
+//made by Marco Spolverato 2032569
 
 #include "Game.h"
 
@@ -25,8 +25,9 @@ std::vector<int> Game::player_order()
         {
             d1 = throw_dices().first;
             d2 = throw_dices().second;
-            std::cout << "Giocatore " << i+1 << " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
-            players[i] = {i+1, (d1 + d2)};
+            std::cout << "Giocatore " << i+1<< " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
+            players.push_back({i+1, (d1 + d2)});
+            std::cout<<"10\n";
             tied_players = check_tie(players);  // Get the indices of the tied players
         }while (!tied_players.empty());  // Repeat if there's a tie
     }
