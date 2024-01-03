@@ -2,8 +2,9 @@
 
 #include "Game.h"
 
-int main (void)
+int main (int argc, char *argv[])
 {
+	std::cout << "elemento da riga di comando: " << argv[1] << std::endl; 
 	Board b {8, 10, 6};
 	HumanPlayer p1(1, &b);
 	ComputerPlayer p2(2, &b);
