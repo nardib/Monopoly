@@ -27,7 +27,6 @@ std::vector<int> Game::player_order()
             d2 = throw_dices().second;
             std::cout << "Giocatore " << i+1<< " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
             players.push_back({i+1, (d1 + d2)});
-            std::cout<<"10\n";
             tied_players = check_tie(players);  // Get the indices of the tied players
         }while (!tied_players.empty());  // Repeat if there's a tie
     }
@@ -45,13 +44,10 @@ std::vector<int> Game::check_tie(std::vector<std::pair<int, int>>& players)
     std::vector<int> tied_players;
     for (int i=0; i<players.size(); i++) 
     {
-        std::cout<<"1\n";
         for (int j=i+1; j<players.size(); j++) 
         {
-            std::cout<<"2\n";
             if (players[i].second == players[j].second) 
             {
-                std::cout<<"3\n";
                 std::cout << "Tie between player " << players[i].first << " and player " << players[j].first << ". Throwing the dices again.\n";
                 tied_players.push_back(i);
                 tied_players.push_back(j);
@@ -60,35 +56,6 @@ std::vector<int> Game::check_tie(std::vector<std::pair<int, int>>& players)
     }
     return tied_players;
 }
-
-/*std::vector<int> Game::player_order()
-{
-    std::vector<std::pair<int, int>> players;
-    std::vector<int> order;
-    int d1=throw_dices().first;
-    int d2=throw_dices().second;
-    std::cout<<"Giocatore "<< p1->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
-    players.push_back({p1->num(), (d1+d2)});
-    d1=throw_dices().first;
-    d2=throw_dices().second;
-    std::cout<<"Giocatore "<< p2->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
-    players.push_back({p2->num(), (d1+d2)});
-    d1=throw_dices().first;
-    d2=throw_dices().second;
-    std::cout<<"Giocatore "<< p3->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
-    players.push_back({p3->num(), (d1+d2)});
-    d1=throw_dices().first;
-    d2=throw_dices().second;
-    std::cout<<"Giocatore "<< p4->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
-    players.push_back({p4->num(), (d1+d2)});
-    std::sort(players.begin(), players.end(), compare_players);
-    for(int i=0; i<4; i++)
-    {
-        order.push_back(players[i].first);
-    }
-    return order;
-}
-*/
 
 void Game::cross_go(Player* p)
 {
