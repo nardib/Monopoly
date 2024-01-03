@@ -19,6 +19,8 @@ class Game
      //function to choose starting player
      std::vector<int> player_order();
 
+     std::vector<int> check_tie(std::vector<std::pair<int, int>>& players);
+
      //function to handle crossing the "go" cell
      void cross_go(Player* p);
 
@@ -29,10 +31,10 @@ class Game
      void reset_properties(Player* p);
 
      //function to buy a terrain
-     void buy_terrain(Player* p);
+     bool buy_terrain(Player* p);
 
      //function to upgrade a building
-     void upgrade(Player* p);
+     bool upgrade(Player* p);
 
      //
      Player* return_player(int n);

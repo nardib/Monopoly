@@ -14,36 +14,80 @@ bool compare_players(const std::pair<int, int>& player1, const std::pair<int, in
 
 std::vector<int> Game::player_order()
 {
-    const int numPlayers = 4;
-    std::vector<std::pair<int, int>> playerResults;
+    std::vector<std::pair<int, int>> players;
+    std::vector<int> order;
+    std::vector<int> tied_players;
+    int d1, d2;
 
-    for (int i = 0; i < numPlayers; ++i) {
-        std::pair<int, int> result = throw_dices();
-        std::cout << "Player " << i + 1 << " throws: " << result.first << " and " << result.second << "." << std::endl;
-        playerResults.push_back(result);
+    // Loop for each player
+    for (int i = 0; i < 4; i++) {
+        do 
+        {
+            d1 = throw_dices().first;
+            d2 = throw_dices().second;
+            std::cout << "Giocatore " << i+1 << " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
+            players[i] = {i+1, (d1 + d2)};
+            tied_players = check_tie(players);  // Get the indices of the tied players
+        }while (!tied_players.empty());  // Repeat if there's a tie
     }
 
-    std::sort(playerResults.rbegin(), playerResults.rend(), compare_players);
+    // Sort and return the order
+    std::sort(players.begin(), players.end(), compare_players);
+    for (const auto &player : players) {
+        order.push_back(player.first);
+    }
+    return order;
+}
 
-    for (int i = 0; i < numPlayers - 1; ++i) {
-        // Check for ties and resolve them by rethrowing dice
-        while ((playerResults[i].first + playerResults[i].second) == (playerResults[i + 1].first + playerResults[i + 1].second)) {
-            std::cout << "Tiebreaker for Player " << i + 1 << " and Player " << i + 2 << "." << std::endl;
-            playerResults[i] = throw_dices();
-            playerResults[i + 1] = throw_dices();
-            std::cout << "New results: " << playerResults[i].first << ", " << playerResults[i].second << " and " << playerResults[i + 1].first << ", " << playerResults[i + 1].second << "." << std::endl;
+std::vector<int> Game::check_tie(std::vector<std::pair<int, int>>& players)
+{
+    std::vector<int> tied_players;
+    for (int i=0; i<players.size(); i++) 
+    {
+        std::cout<<"1\n";
+        for (int j=i+1; j<players.size(); j++) 
+        {
+            std::cout<<"2\n";
+            if (players[i].second == players[j].second) 
+            {
+                std::cout<<"3\n";
+                std::cout << "Tie between player " << players[i].first << " and player " << players[j].first << ". Throwing the dices again.\n";
+                tied_players.push_back(i);
+                tied_players.push_back(j);
+            }
         }
     }
-
-    std::vector<int> finalOrder;
-    for (int i = 0; i < numPlayers; ++i) {
-        // Push the index (player order) into the finalOrder vector in reverse order
-        finalOrder.push_back(i + 1);
-    }
-
-    std::cout << finalOrder[0] << finalOrder[1] << finalOrder[2] << finalOrder[3];
-    return finalOrder;
+    return tied_players;
 }
+
+/*std::vector<int> Game::player_order()
+{
+    std::vector<std::pair<int, int>> players;
+    std::vector<int> order;
+    int d1=throw_dices().first;
+    int d2=throw_dices().second;
+    std::cout<<"Giocatore "<< p1->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
+    players.push_back({p1->num(), (d1+d2)});
+    d1=throw_dices().first;
+    d2=throw_dices().second;
+    std::cout<<"Giocatore "<< p2->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
+    players.push_back({p2->num(), (d1+d2)});
+    d1=throw_dices().first;
+    d2=throw_dices().second;
+    std::cout<<"Giocatore "<< p3->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
+    players.push_back({p3->num(), (d1+d2)});
+    d1=throw_dices().first;
+    d2=throw_dices().second;
+    std::cout<<"Giocatore "<< p4->num()<< " ha tirato i dadi ottenendo un valore di "<< d1<<" + "<< d2<< " = "<< d1+d2<< ".\n";
+    players.push_back({p4->num(), (d1+d2)});
+    std::sort(players.begin(), players.end(), compare_players);
+    for(int i=0; i<4; i++)
+    {
+        order.push_back(players[i].first);
+    }
+    return order;
+}
+*/
 
 void Game::cross_go(Player* p)
 {
@@ -69,29 +113,35 @@ void Game::reset_properties(Player* p)
     std::cout<<"Giocatore "<< p->num()<< " ha donato le sue proprietà alla banca in seguito alla bancarotta.\n";
 }
 
-void Game::buy_terrain(Player* p)
+bool Game::buy_terrain(Player* p)
 {
     if(p->buy_intent())
     {
         (b->get_value(p->pos())).buy_property(p->num());
+        std::cout<<"Giocatore "<< p->num()<< " ha acquistato il terreno "<< p->pos()<<".\n";
+        return true;
     }
-    std::cout<<"Giocatore "<< p->num()<< " ha acquistato il terreno "<< p->pos()<<".\n";
+    return false;
 }
 
-void Game::upgrade(Player* p)
+bool Game::upgrade(Player* p)
 {
-    if(p->upgrade_intent() || (b->get_value(p->pos())).return_owner()==p->num())
+    if(p->upgrade_intent())
     {
         (b->get_value(p->pos())).upgrade_building();
         if((b->get_value(p->pos())).building_type()==Building::House)
         {
             std::cout<<"Giocatore "<< p->num()<< " ha costruito una casa sul terreno "<< p->pos()<<".";
+            return true;
         }
         if((b->get_value(p->pos())).building_type()==Building::Hotel)
         {
             std::cout<<"Giocatore "<< p->num()<< " ha migliorato una casa in albergo sul terreno "<< p->pos()<< ".";
+            return true;
         }
+        return false;
     }
+    return false;
 }
 
 Player* Game::return_player(int n)
@@ -172,25 +222,24 @@ bool Game::check_dices()
 void Game::game()
 {
     bool done=false;
-    //std::vector<int> po = player_order();
+    std::vector<int> po = player_order();
+    std::cout<<po[0]<< " "<< po[1]<< " "<< po[2]<< " "<< po[3]<< "\n";
     int player_count=4;
     int turn_count=0;
+    bool in_turn;
     Player* curr;
     while(!done)
     {
-        for(int i=1; i<5; i++)
+        for(int i=0; i<4; i++)
         {
-            std::cout<<*b;
-            bool in_turn=true;
-            /*if(return_player(po.at(i))->is_playing())
+            if(return_player(po[i])->is_playing())
             {    
-                curr= return_player(po.at(i));
+                curr= return_player(po[i]);
                 in_turn=true;
-            }*/
-            curr= return_player(i);
+            }
             if(player_count==1)
             {
-                i=5;
+                i=4;
                 std::cout<< "Giocatore "<< curr->num()<< " ha vinto la partita.\n";
                 done=true;
             }
@@ -205,29 +254,37 @@ void Game::game()
                 in_turn = check_dices();
                 int start_pos= curr->pos();
                 move_player(curr, (dices.first + dices.second));
+                std::cout<<*b;
                 int end_pos= curr->pos();
                 if(end_pos<start_pos)
                 {
                     cross_go(curr);
                 }
-                buy_terrain(curr);
-                upgrade(curr);
+                if((b->get_value(curr->pos())).return_owner()==curr->num())
+                {
+                    upgrade(curr);
+                }
+                if(b->get_value(curr->pos()).return_owner()==0)
+                {
+                    buy_terrain(curr);
+                }
                 if(!pay_stay(curr))
                 {
                     player_count--;
-                    std::cout<<"Giocatore " << curr->num() << " e' stato eliminato.";
+                    std::cout<<"Giocatore " << curr->num() << " e' stato eliminato.\n";
                 }
             }
             std::cout<<"Giocatore " << curr->num() << " ha finito il turno.\n";
-            if(i==4)
+            if(i==3)
             {
-                i==1;
+                i==0;
             }
+            turn_count++;
             if(turn_count>100)
             {
                 int richest;
                 int winner;
-                for(int i=1;i<5; i++)
+                for(int i=0;i<4; i++)
                 {
                     if(curr->budget()>richest)
                     {
@@ -235,7 +292,8 @@ void Game::game()
                         winner=curr->num();
                     }
                 }
-                i=5;
+                std::cout<<"Giocatore "<< winner<< " ha vinto la partita!\n";
+                i=4;
                 done=true;
             }
         }
