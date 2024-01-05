@@ -8,6 +8,7 @@
 #include "ComputerPlayer.h"
 #include <algorithm>
 #include <vector>
+#include <map>
 
 class Game
 {
@@ -19,7 +20,7 @@ class Game
      //function to choose starting player
      std::vector<int> player_order();
 
-     std::vector<int> check_tie(std::vector<std::pair<int, int>>& players);
+     std::vector<int> check_tie(const std::vector<std::pair<int, int>>& players);
 
      //function to handle crossing the "go" cell
      void cross_go(Player* p);

@@ -58,6 +58,7 @@ public:
   int terrain_price() const;
   int house_price() const;
   int hotel_price() const;
+  int price() const;
   int accomodation_house_price() const;
   int accomodation_hotel_price() const;
 

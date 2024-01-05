@@ -93,6 +93,18 @@ int Cell::hotel_price() const
 	}
 }
 
+int Cell::price() const
+{
+	if(b == Building::None)
+		return terrain_price();
+	else if(b == Building::House)
+		return house_price();
+	else if(b == Building::Hotel)
+		return hotel_price();
+	else
+		return 0;
+}
+
 //return accomodation price for this cell in an house
 int Cell::accomodation_house_price() const
 {

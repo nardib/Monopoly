@@ -35,7 +35,8 @@ void Player::decrease_balance (int n)
 		throw std::invalid_argument("The amount of money must be positive");
 	if (balance - n >= 0)
 		balance -= n;
-	throw Player::NotEnoughMoney("You don't have enough money to complete this operation");
+	else
+		throw Player::NotEnoughMoney("You don't have enough money to complete this operation");
 }
 
 void Player::increase_balance (int n)
