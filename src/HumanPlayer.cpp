@@ -5,27 +5,31 @@
 bool HumanPlayer::buy_intent() {
         // Implement the logic for buying the property
         std::string answer;
+        if(budget() >= get_board()->get_value(get_pos_in_board()).price()){ 
         do{
-            std::cout << "Do you want to buy this property? (s/n): ";
+            std::cout << "Vuoi comprare cella " << pos() << "? (s/n): ";
             std::cin >> answer;
 
             std::cin.clear();
-            fflush(stdin);
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }while(answer != "s" && answer != "n");
         
         return (answer == "s");
+        }
 }
 
  bool HumanPlayer::upgrade_intent() {
         // Implement the logic for upgrading the building
         std::string answer;
+        if(budget() >= get_board()->get_value(get_pos_in_board()).price()){
         do{
-            std::cout << "Do you want to upgrade the building in this cell? (s/n): ";
+            std::cout <<"Vuoi migliorare cella " << pos() << "? (s/n): ";
             std::cin >> answer;
 
             std::cin.clear();
-            fflush(stdin);
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }while(answer != "s" && answer != "n");
 
         return (answer == "s");
+        }
 }
