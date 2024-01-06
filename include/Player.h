@@ -19,6 +19,7 @@ public:
 	int num() const {return player_num;}
 	int pos() const {return player_pos;}
 	bool is_playing() const {return playing;}
+	Board * get_board() { return board;}
 
 	//move this player in the board n positions forward
 	void move(int n);
