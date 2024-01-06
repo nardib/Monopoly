@@ -58,7 +58,7 @@ public:
   int terrain_price() const;
   int house_price() const;
   int hotel_price() const;
-  int price() const;
+  int price() const;  //this function return the price for the terrain if it's not bought, and the prices for the upgrades
   int accomodation_house_price() const;
   int accomodation_hotel_price() const;
 

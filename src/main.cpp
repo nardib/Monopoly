@@ -5,7 +5,7 @@
 int main (int argc, char *argv[])
 {
 	if(argc > 1)
-		std::cout << "elemento da riga di comando: " << argv[1] << std::endl; 
+		std::cout << "elemento da riga di comando: " << argv[1] << std::endl;
 	Board b {8, 10, 6};
 	HumanPlayer p1(1, &b);
 	ComputerPlayer p2(2, &b);

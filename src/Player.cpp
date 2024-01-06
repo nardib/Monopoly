@@ -32,7 +32,7 @@ int Player::get_pos_in_board()
 void Player::decrease_balance (int n)
 {
 	if (n < 0)
-		throw std::invalid_argument("The amount of money must be positive");
+		throw std::invalid_argument("the amount of money must be positive");
 	if (balance - n >= 0)
 		balance -= n;
 	else

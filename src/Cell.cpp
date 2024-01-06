@@ -30,6 +30,7 @@ void Cell::sell_property()
 	if(property_check == 0)
 		throw Cell::PropertyNotBought("This property is not bought, so it can't be sold by a player");
 	property_check = 0;
+	b = Building::None;
 }
 
 //return terrain price for this cell
@@ -93,6 +94,7 @@ int Cell::hotel_price() const
 	}
 }
 
+//??
 int Cell::price() const
 {
 	if(b == Building::None)
@@ -231,7 +233,17 @@ std::ostream& operator<< (std::ostream& out, Building b)
 //overload operator<< for class Cell
 std::ostream& operator<< (std::ostream& out, Cell cell)
 {
-	std::cout << "| ";
+	std::cout << "|";
+	if(cell.return_owner() == 1)
+		std::cout << "\u00B9";	//unicode code for 1's superscript number
+	else if (cell.return_owner() == 2)	
+		std::cout << "\u00B2";	//unicode code for 2's superscript number
+	else if (cell.return_owner() == 3)	
+		std::cout << "\u00B3";	//unicode code for 3's superscript number
+	else if (cell.return_owner() == 4)	
+		std::cout << "\u2074";	//unicode code for 4's superscript number
+	else
+		std::cout << ' ';
 	std::cout << cell.return_type() << cell.building_type();
 	if(cell.p1)
 		std::cout << '1';

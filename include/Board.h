@@ -22,7 +22,7 @@ public:
 	void move_to(int player_num, int n);
 
 	//returns Cell[i] value (da aggiornare in Board.cpp con il controllo che i sia valido)
-	Cell get_value(int i);
+	Cell& get_value(int i);
 	//return the position of the player in the board
 	int p1() {return p1_pos;}
 	int p2() {return p2_pos;}

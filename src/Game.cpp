@@ -293,10 +293,11 @@ void Game::game()
             turn_count++;
             if(turn_count>100)
             {
-                int richest;
-                int winner;
+                int richest = 0;
+                int winner = 0;
                 for(int i=0;i<4; i++)
                 {
+                    curr = return_player(i);
                     if(curr->budget()>richest)
                     {
                         richest=curr->budget();
