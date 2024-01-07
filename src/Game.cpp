@@ -297,7 +297,7 @@ void Game::game()
                 int winner = 0;
                 for(int i=0;i<4; i++)
                 {
-                    curr = return_player(i);
+                    curr = return_player(i+1);
                     if(curr->budget()>richest)
                     {
                         richest=curr->budget();
