@@ -2,6 +2,7 @@
 
 #include "ComputerPlayer.h"
 
+/*
 int random(int min, int max)
 {
 	//seed the random number generator
@@ -13,7 +14,7 @@ int random(int min, int max)
 
 	//return a random number between min and max
 	return distribution(gen);
-}
+}*/
 
 bool ComputerPlayer::buy_intent() {
         // Implement the logic for buying the property, this function will return true with a probability of 25%

@@ -39,4 +39,7 @@ private:
 //overload operator<< to print the board
 std::ostream& operator<< (std::ostream& out, Board b);
 
+//function that returns a number between min and max (this will be used in various part of the code)
+int random (int min, int max);
+
 #endif

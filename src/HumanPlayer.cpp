@@ -16,6 +16,7 @@ bool HumanPlayer::buy_intent() {
         
         return (answer == "s");
         }
+        return false;
 }
 
  bool HumanPlayer::upgrade_intent() {
@@ -32,4 +33,5 @@ bool HumanPlayer::buy_intent() {
 
         return (answer == "s");
         }
+        return false;
 }
