@@ -65,7 +65,7 @@ class Game
 //function to throw a dice
 int throw_dice(int max)
   {
-     return(rand() % max) + 1;
+     return random(1, 6);
   }
 
 #endif

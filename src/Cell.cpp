@@ -18,8 +18,10 @@ Cell::Cell (CellType c) : type {c}, property_check {0}, p1 {false}, p2 {false}, 
 //set the new owner
 void Cell::buy_property(int p)
 {
-	if(property_check == 0 && !(p < 1 || p > 4))
+	if(property_check == 0 && !(p < 1 || p > 4) && type != CellType::Start && type != CellType::Void)
 		property_check = p;
+	else if (type == CellType::Start || type == CellType::Void)
+		return;
 	else
 		throw std::invalid_argument("The player must be valid or the property is already bought");
 }
