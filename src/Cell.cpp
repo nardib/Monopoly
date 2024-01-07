@@ -21,7 +21,7 @@ void Cell::buy_property(int p)
 	if(property_check == 0 && !(p < 1 || p > 4) && type != CellType::Start && type != CellType::Void)
 		property_check = p;
 	else if (type == CellType::Start || type == CellType::Void)
-		return;
+		throw std::invalid_argument("This cell can't be bought");
 	else
 		throw std::invalid_argument("The player must be valid or the property is already bought");
 }
