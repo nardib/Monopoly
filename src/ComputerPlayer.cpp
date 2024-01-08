@@ -21,6 +21,9 @@ bool ComputerPlayer::buy_intent() {
         int rnd = random(1, 4);
         
         return (rnd == 1);
+		
+		p_owned_cells.push_back(pos());
+		std::sort(p_owned_cells.begin(), p_owned_cells.end());
 }
 
  bool ComputerPlayer::upgrade_intent() {

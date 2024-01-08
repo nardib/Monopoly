@@ -17,6 +17,9 @@ bool HumanPlayer::buy_intent() {
         return (answer == "s");
         }
         return false;
+        
+        p_owned_cells.push_back(pos());
+        std::sort(p_owned_cells.begin(), p_owned_cells.end());
 }
 
  bool HumanPlayer::upgrade_intent() {

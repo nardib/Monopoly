@@ -4,6 +4,8 @@
 #define PLAYER_H
 
 #include "Board.h"
+#include <vector>
+#include <algorithm>
 
 class Player
 {
@@ -49,6 +51,8 @@ protected:
 	Player () : balance {100}, player_num {0}, player_pos {0}, playing {false} {}
 	//constructor with the number of the player and the board where it plays
 	Player (int num, Board* b) : balance {100}, player_num {num}, player_pos {0}, board {b}, playing{true}  {if(player_num < 1 || player_num > 4) throw std::invalid_argument("Number of player must be between 1 and 4");}
+	//cells owned by the player
+	std::vector<int> p_owned_cells;
 
 private:
 
