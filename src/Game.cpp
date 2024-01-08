@@ -89,7 +89,7 @@ std::vector<int> Game::check_tie(const std::vector<std::pair<int, int>>& players
 void Game::cross_go(Player* p)
 {
     p->increase_balance(20);
-    std::cout<<"Giocatore "<< p->num()<< " è passato dal via e ha ritirato 20 fiorini.\n";
+    std::cout<<"Giocatore "<< p->num()<< " e' passato dal via e ha ritirato 20 fiorini.\n";
 }
 
 void Game::move_player(Player* p,int n)
@@ -130,13 +130,13 @@ bool Game::upgrade(Player* p)
         if((b->get_value(p->pos())).building_type()==Building::House)
         {
             p->decrease_balance((b->get_value(p->pos())).house_price());
-            std::cout<<"Giocatore "<< p->num()<< " ha costruito una casa sul terreno "<< p->pos()<<".";
+            std::cout<<"Giocatore "<< p->num()<< " ha costruito una casa sul terreno "<< p->pos()<<".\n";
             return true;
         }
         if((b->get_value(p->pos())).building_type()==Building::Hotel)
         {
             p->decrease_balance((b->get_value(p->pos())).hotel_price());
-            std::cout<<"Giocatore "<< p->num()<< " ha migliorato una casa in albergo sul terreno "<< p->pos()<< ".";
+            std::cout<<"Giocatore "<< p->num()<< " ha migliorato una casa in albergo sul terreno "<< p->pos()<< ".\n";
             return true;
         }
         return false;
@@ -167,7 +167,7 @@ Player* Game::return_player(int n)
 
 bool Game::pay_stay(Player* p)
 {
-    if((b->get_value(p->pos())).return_owner()==0 && (b->get_value(p->pos())).return_owner()==p->num())
+    if((b->get_value(p->pos())).return_owner()!=0 && (b->get_value(p->pos())).return_owner()!=p->num())
     {
         if((b->get_value(p->pos())).building_type()==Building::House)
         {
@@ -204,6 +204,7 @@ bool Game::pay_stay(Player* p)
             }
         }
     }
+    std::cout<<"La casella e' di proprieta' di "<<(b->get_value(p->pos()).return_owner()) <<" ma, senza alcun edificio, il transito e' gratuito.\n";
     return true;
 }
 
@@ -258,23 +259,42 @@ void Game::game()
                 move_player(curr, (dices.first + dices.second));
                 std::cout<<*b;
                 int end_pos= curr->pos();
+                std::cout<< curr->budget()<< " fiorini.\n";
                 if(end_pos<start_pos)
                 {
                     cross_go(curr);
+                    std::cout<<"(+20) -> "<< curr->budget()<< " fiorini.\n";
                 }
-                std::cout<< curr->budget()<< " fiorini.\n";
-                if(b->get_value(curr->pos()).return_owner()==curr->num() && (curr->budget()>=(b->get_value(curr->pos())).price()))
+                if(b->get_value(curr->pos()).return_owner()==(curr->num()) && curr->pos()!=0 && curr->pos()!=7 && curr->pos()!=14 && curr->pos()!=21 && (curr->budget()>=(b->get_value(curr->pos())).price()) && (b->get_value(curr->pos())).building_type()!=Building::Hotel)
                 {
-                    upgrade(curr);
+                    if(upgrade(curr))
+                    {
+                        std::cout<<"(-"<< b->get_value(curr->pos()).price() <<") -> "<< curr->budget()<< " fiorini.\n";
+                    }
                 }
-                if(b->get_value(curr->pos()).return_owner()==0 && curr->budget()>=(b->get_value(curr->pos())).terrain_price() && b->get_value(curr->pos()).building_type()==Building::None)
+                if(b->get_value(curr->pos()).return_owner()==0 && curr->pos()!=0 && curr->pos()!=7 && curr->pos()!=14 && curr->pos()!=21 && curr->budget()>=(b->get_value(curr->pos())).terrain_price() && b->get_value(curr->pos()).building_type()==Building::None)
                 {
-                    buy_terrain(curr);
+                    if(buy_terrain(curr))
+                    {
+                        std::cout<<"(-"<< b->get_value(curr->pos()).terrain_price() <<") -> "<< curr->budget()<< " fiorini.\n";
+                    }
                 }
-                if(b->get_value(curr->pos()).return_owner()!=0 && b->get_value(curr->pos()).return_owner()!=curr->num())
+                if((b->get_value(curr->pos()).return_owner())!=0 && (b->get_value(curr->pos()).return_owner())!=curr->num())
                 {
                     if(pay_stay(curr))
-                    {}
+                    {
+                        if((b->get_value(curr->pos())).building_type()==Building::House)
+                        {
+                            std::cout<<"(-"<< (b->get_value(curr->pos())).accomodation_house_price() <<") -> "<< curr->budget()<< " fiorini.\n";
+                            std::cout<<"Giocatore "<<(return_player(b->get_value(curr->pos()).return_owner()))->num() <<" (+"<< (b->get_value(curr->pos())).accomodation_house_price() <<") -> "<< (return_player(b->get_value(curr->pos()).return_owner()))->budget()<< " fiorini.\n";
+                        }
+                        else if((b->get_value(curr->pos())).building_type()==Building::Hotel)
+                        {
+                            std::cout<<"(-"<< (b->get_value(curr->pos())).accomodation_hotel_price() <<") -> "<< curr->budget()<< " fiorini.\n";
+                            std::cout<<"Giocatore "<<(return_player(b->get_value(curr->pos()).return_owner()))->num() <<" (+"<< (b->get_value(curr->pos())).accomodation_hotel_price() <<") -> "<< (return_player(b->get_value(curr->pos()).return_owner()))->budget()<< " fiorini.\n";
+                        }
+                        
+                    }
                     else
                     {
                         player_count--;
@@ -290,8 +310,9 @@ void Game::game()
             {
                 i==0;
             }
+            std::cin.get();
             turn_count++;
-            if(turn_count>100)
+            if(turn_count>1000)
             {
                 int richest = 0;
                 int winner = 0;
@@ -305,6 +326,11 @@ void Game::game()
                     }
                 }
                 std::cout<<"Giocatore "<< winner<< " ha vinto la partita!\n";
+                for(int i=0; i< 4; i++)
+                {
+                    curr = return_player(i+1);
+                    std::cout<<"Giocatore "<< curr->num()<< ": "<< curr->budget()<< " fiorini.\n";
+                }
                 i=4;
                 done=true;
             }
