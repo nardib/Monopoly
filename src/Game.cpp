@@ -32,26 +32,30 @@ std::vector<int> Game::player_order()
         return a.second > b.second;
     });
 
-    // Check for ties among the top players and resolve them
     std::vector<int> tied_players = check_tie(players);
-    std::vector<std::pair<int, int>> resolved_ties;
-    for (int i = 0; i < tied_players.size(); i++) 
-    {
-        d1 = throw_dices().first;
-        d2 = throw_dices().second;
-        std::cout << "Giocatore " << players[tied_players[i]].first << " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
-        resolved_ties.push_back({players[tied_players[i]].first, d1 + d2});  // Store the resolved ties separately
+
+    while (!tied_players.empty()) {
+        for (int i = 0; i < tied_players.size(); i++) 
+        {
+            d1 = throw_dices().first;
+            d2 = throw_dices().second;
+            std::cout << "Giocatore " << players[tied_players[i]].first << " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
+            players[tied_players[i]].second = d1 + d2;  // Update the score of the player
+        }
+
+        // Sort the players by score in descending order
+        std::sort(players.begin(), players.end(), [](const std::pair<int, int>& a, const std::pair<int, int>& b) {
+            return a.second > b.second;
+        });
+
+        // Check for ties again
+        tied_players = check_tie(players);
     }
 
-    // Sort the resolved ties by score in descending order
-    std::sort(resolved_ties.begin(), resolved_ties.end(), [](const std::pair<int, int>& a, const std::pair<int, int>& b) {
-        return a.second > b.second;
-    });
-
-    // Replace the scores of the tied players in the players vector with their new scores
-    for (int i = 0; i < tied_players.size(); i++) 
+    // Create the order of players
+    for (const auto& player : players) 
     {
-        players[tied_players[i]].second = resolved_ties[i].second;
+        order.push_back(player.first);
     }
 
     // Create the order of players
@@ -90,12 +94,14 @@ void Game::cross_go(Player* p)
 {
     p->increase_balance(20);
     std::cout<<"Giocatore "<< p->num()<< " e' passato dal via e ha ritirato 20 fiorini.\n";
+    out<<"Giocatore "<< p->num()<< " e' passato dal via e ha ritirato 20 fiorini.\n";
 }
 
 void Game::move_player(Player* p,int n)
 {
     p->move(n);
     std::cout<<"Giocatore "<< p->num()<< " e' arrivato alla casella "<< p->pos()<< ".\n";
+    out<<"Giocatore "<< p->num()<< " e' arrivato alla casella "<< p->pos()<< ".\n";
 }
 
 void Game::reset_properties(Player* p)
@@ -108,6 +114,7 @@ void Game::reset_properties(Player* p)
         }
     }
     std::cout<<"Giocatore "<< p->num()<< " ha donato le sue proprietà alla banca in seguito alla bancarotta.\n";
+    out<<"Giocatore "<< p->num()<< " ha donato le sue proprietà alla banca in seguito alla bancarotta.\n";
 }
 
 bool Game::buy_terrain(Player* p)
@@ -117,6 +124,7 @@ bool Game::buy_terrain(Player* p)
         (b->get_value(p->pos())).buy_property(p->num());
         p->decrease_balance((b->get_value(p->pos())).terrain_price());
         std::cout<<"Giocatore "<< p->num()<< " ha acquistato il terreno "<< p->pos()<<".\n";
+        out<<"Giocatore "<< p->num()<< " ha acquistato il terreno "<< p->pos()<<".\n";
         return true;
     }
     return false;
@@ -131,12 +139,14 @@ bool Game::upgrade(Player* p)
         {
             p->decrease_balance((b->get_value(p->pos())).house_price());
             std::cout<<"Giocatore "<< p->num()<< " ha costruito una casa sul terreno "<< p->pos()<<".\n";
+            out<<"Giocatore "<< p->num()<< " ha costruito una casa sul terreno "<< p->pos()<<".\n";
             return true;
         }
         if((b->get_value(p->pos())).building_type()==Building::Hotel)
         {
             p->decrease_balance((b->get_value(p->pos())).hotel_price());
             std::cout<<"Giocatore "<< p->num()<< " ha migliorato una casa in albergo sul terreno "<< p->pos()<< ".\n";
+            out<<"Giocatore "<< p->num()<< " ha migliorato una casa in albergo sul terreno "<< p->pos()<< ".\n";
             return true;
         }
         return false;
@@ -175,12 +185,14 @@ bool Game::pay_stay(Player* p)
             {
                 p->decrease_balance((b->get_value(p->pos())).accomodation_house_price());
                 (return_player(b->get_value(p->pos()).return_owner()))->increase_balance((b->get_value(p->pos())).accomodation_house_price());
-                std::cout<<"Giocatore "<< p->num()<< " ha pagato "<< ((b->get_value(p->pos())).accomodation_house_price())<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento nella casella "<< p->pos()<< ".\n";
+                std::cout<<"Giocatore "<< p->num()<< " ha pagato "<< ((b->get_value(p->pos())).accomodation_house_price())<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento in una casa nella casella "<< p->pos()<< ".\n";
+                out<<"Giocatore "<< p->num()<< " ha pagato "<< ((b->get_value(p->pos())).accomodation_house_price())<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento in una casa nella casella "<< p->pos()<< ".\n";
                 return true;
             }
             else
             {
                 std::cout<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
+                out<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
                 p->decrease_balance(p->budget());
                 (return_player(b->get_value(p->pos()).return_owner()))->increase_balance(p->budget());
                 return false;
@@ -192,12 +204,14 @@ bool Game::pay_stay(Player* p)
             {
                 p->decrease_balance((b->get_value(p->pos())).accomodation_hotel_price());
                 (return_player(b->get_value(p->pos()).return_owner()))->increase_balance((b->get_value(p->pos())).accomodation_hotel_price());
-                std::cout<<"Giocatore "<< p->num()<< " ha pagato "<< (b->get_value(p->pos())).accomodation_hotel_price()<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento nella casella "<< p->pos()<< ".\n";
+                std::cout<<"Giocatore "<< p->num()<< " ha pagato "<< (b->get_value(p->pos())).accomodation_hotel_price()<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento in Hotel nella casella "<< p->pos()<< ".\n";
+                out<<"Giocatore "<< p->num()<< " ha pagato "<< (b->get_value(p->pos())).accomodation_hotel_price()<< " fiorini a giocatore "<< (b->get_value(p->pos()).return_owner())<< " per pernottamento in Hotel nella casella "<< p->pos()<< ".\n";
                 return true;
             }
             else
             {
                 std::cout<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
+                out<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
                 p->decrease_balance(p->budget());
                 (return_player(b->get_value(p->pos()).return_owner()))->increase_balance(p->budget());
                 return false;
@@ -205,6 +219,7 @@ bool Game::pay_stay(Player* p)
         }
     }
     std::cout<<"La casella e' di proprieta' di "<<(b->get_value(p->pos()).return_owner()) <<" ma, senza alcun edificio, il transito e' gratuito.\n";
+    out<<"La casella e' di proprieta' di "<<(b->get_value(p->pos()).return_owner()) <<" ma, senza alcun edificio, il transito e' gratuito.\n";
     return true;
 }
 
@@ -222,9 +237,12 @@ bool Game::check_dices()
 
 void Game::game()
 {
+    //const char* path = "../Logs/Log.txt";
+    //std::ofstream out(path);
     bool done=false;
     std::vector<int> po = player_order();
     std::cout<< "L'ordine dei giocatori e': "<<po[0]<< " "<< po[1]<< " "<< po[2]<< " "<< po[3]<< ".\n";
+    out<< "L'ordine dei giocatori e': "<<po[0]<< " "<< po[1]<< " "<< po[2]<< " "<< po[3]<< ".\n";
     int player_count=4;
     int turn_count=0;
     bool in_turn;
@@ -242,6 +260,7 @@ void Game::game()
             {
                 i=4;
                 std::cout<< "Giocatore "<< curr->num()<< " ha vinto la partita.\n";
+                out<< "Giocatore "<< curr->num()<< " ha vinto la partita.\n";
                 done=true;
                 in_turn=false;
                 std::cout<< curr->budget()<< " fiorini.\n";
@@ -251,9 +270,11 @@ void Game::game()
                 if(check_dices() && turn_count>0)
                 {
                     std::cout<< "Giocatore "<< curr->num()<< " ha ottenuto un lancio doppio e svolgera' un altro turno.\n";
+                    out<< "Giocatore "<< curr->num()<< " ha ottenuto un lancio doppio e svolgera' un altro turno.\n";
                 }
                 std::pair<int, int> dices = throw_dices();
                 std::cout<<"Giocatore "<< curr->num()<< " ha tirato i dadi ottenendo un valore di "<< dices.first<<" + "<< dices.second<< " = "<< dices.first+dices.second<< ".\n";
+                out<<"Giocatore "<< curr->num()<< " ha tirato i dadi ottenendo un valore di "<< dices.first<<" + "<< dices.second<< " = "<< dices.first+dices.second<< ".\n";
                 in_turn = check_dices();
                 int start_pos= curr->pos();
                 move_player(curr, (dices.first + dices.second));
@@ -293,12 +314,12 @@ void Game::game()
                             std::cout<<"(-"<< (b->get_value(curr->pos())).accomodation_hotel_price() <<") -> "<< curr->budget()<< " fiorini.\n";
                             std::cout<<"Giocatore "<<(return_player(b->get_value(curr->pos()).return_owner()))->num() <<" (+"<< (b->get_value(curr->pos())).accomodation_hotel_price() <<") -> "<< (return_player(b->get_value(curr->pos()).return_owner()))->budget()<< " fiorini.\n";
                         }
-                        
                     }
                     else
                     {
                         player_count--;
                         std::cout<<"Giocatore " << curr->num() << " e' stato eliminato.\n";
+                        out<<"Giocatore " << curr->num() << " e' stato eliminato.\n";
                         reset_properties(curr);
                         curr->end_game();
                         in_turn=false;
@@ -306,13 +327,14 @@ void Game::game()
                 }
             }
             std::cout<<"Giocatore " << curr->num() << " ha finito il turno.\n";
+            out<<"Giocatore " << curr->num() << " ha finito il turno.\n";
             if(i==3)
             {
                 i==0;
             }
             std::cin.get();
             turn_count++;
-            if(turn_count>1000)
+            if(turn_count>50)
             {
                 int richest = 0;
                 int winner = 0;
@@ -325,15 +347,25 @@ void Game::game()
                         winner=curr->num();
                     }
                 }
-                std::cout<<"Giocatore "<< winner<< " ha vinto la partita!\n";
+                for(int i=0; i< 4; i++)
+                {
+                    curr = return_player(i+1);
+                    if(curr->budget()==return_player(winner)->budget())
+                    {
+                        std::cout<<"Giocatore "<< curr->num()<< " ha vinto la partita.\n";
+                        out<<"Giocatore "<< curr->num()<< " ha vinto la partita.\n";
+                    }
+                }
                 for(int i=0; i< 4; i++)
                 {
                     curr = return_player(i+1);
                     std::cout<<"Giocatore "<< curr->num()<< ": "<< curr->budget()<< " fiorini.\n";
+                    out<<"Giocatore "<< curr->num()<< ": "<< curr->budget()<< " fiorini.\n";
                 }
                 i=4;
                 done=true;
             }
         }
     }
+    out.close();
 }

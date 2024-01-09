@@ -9,13 +9,14 @@
 #include <algorithm>
 #include <vector>
 #include <map>
+#include <fstream>
 
 class Game
 {
     public:
      
      //constructor
-     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo}{}
+     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo},out{"../Logs/Log.txt"}{};
 
      //function to choose starting player
      std::vector<int> player_order();
@@ -60,6 +61,7 @@ class Game
      Player *p4;
      int dice1;
      int dice2;
+     std::ofstream out;
 }; 
 
 //function to throw a dice
