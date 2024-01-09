@@ -19,11 +19,13 @@ int random(int min, int max)
 bool ComputerPlayer::buy_intent() {
         // Implement the logic for buying the property, this function will return true with a probability of 25%
         int rnd = random(1, 4);
-        
-        return (rnd == 1);
-		
-		p_owned_cells.push_back(pos());
-		std::sort(p_owned_cells.begin(), p_owned_cells.end());
+		if(rnd == 1){
+                p_property.push_back(pos());
+                std::sort(p_property.begin(), p_property.end());
+                return true;
+            }else{
+                return false;
+            }
 }
 
  bool ComputerPlayer::upgrade_intent() {

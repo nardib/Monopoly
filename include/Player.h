@@ -22,6 +22,7 @@ public:
 	int pos() const {return player_pos;}
 	bool is_playing() const {return playing;}
 	Board * get_board() { return board;}
+	std::vector<int> get_properties() const {return p_property;}
 
 	//move this player in the board n positions forward
 	void move(int n);
@@ -35,7 +36,7 @@ public:
 	void increase_balance (int n);
 
 	//i change the value of this player to false; once it turns to false, it can't become true anymore
-	void end_game() {playing = false;}
+	void end_game() {playing = false; p_property.clear();}
 
 	//virtual functions that must be overrided (they )
 	virtual bool buy_intent() = 0;	//this function returns true if the player would buy this property
@@ -51,8 +52,8 @@ protected:
 	Player () : balance {100}, player_num {0}, player_pos {0}, playing {false} {}
 	//constructor with the number of the player and the board where it plays
 	Player (int num, Board* b) : balance {100}, player_num {num}, player_pos {0}, board {b}, playing{true}  {if(player_num < 1 || player_num > 4) throw std::invalid_argument("Number of player must be between 1 and 4");}
-	//cells owned by the player
-	std::vector<int> p_owned_cells;
+	//property owned by the player
+	std::vector<int> p_property;
 
 private:
 
