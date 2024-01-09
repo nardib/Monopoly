@@ -2,42 +2,42 @@
 
 #include "HumanPlayer.h"
 
+// Implement the logic for buying the property
 bool HumanPlayer::buy_intent() {
-        // Implement the logic for buying the property
-        std::string answer;
-        if(budget() >= get_board()->get_value(get_pos_in_board()).price() && board->get_value(pos()).return_type() != (CellType::Void) && board->get_value(pos()).return_type() != (CellType::Start)){ 
-                do{
-                    std::cout << "Vuoi comprare cella " << pos() << "? (s/n): ";
-                    std::cin >> answer;
+    std::string answer;
+    //Check if the player has enough balance to buy the property and check if the cell is not a Void or Start cell
+    if(budget() >= get_board()->get_value(get_pos_in_board()).price() && board->get_value(pos()).return_type() != (CellType::Void) && board->get_value(pos()).return_type() != (CellType::Start)){ 
+        do{
+            std::cout << "Vuoi comprare cella " << pos() << "? (s/n): ";
+            std::cin >> answer;
 
-                    std::cin.clear();
-                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                }while(answer != "s" && answer != "n");
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }while(answer != "s" && answer != "n");
                 
-                if(answer == "s"){
-                    p_property.push_back(pos());
-                    std::sort(p_property.begin(), p_property.end());
-                    return true;
-                }
-            }    
-        return false;
-        
-        
+        if(answer == "s"){
+            p_property.push_back(pos());
+            std::sort(p_property.begin(), p_property.end());
+            
+            return true;
+        }
+    }    
+    return false;
 }
 
+// Implement the logic for upgrading the building
  bool HumanPlayer::upgrade_intent() {
-        // Implement the logic for upgrading the building
-        std::string answer;
-        if(budget() >= get_board()->get_value(get_pos_in_board()).price()){
-            do{
-                std::cout <<"Vuoi migliorare cella " << pos() << "? (s/n): ";
-                std::cin >> answer;
+    std::string answer;
+    if(budget() >= get_board()->get_value(get_pos_in_board()).price()){
+        do{
+            std::cout <<"Vuoi migliorare cella " << pos() << "? (s/n): ";
+            std::cin >> answer;
 
-                std::cin.clear();
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            }while(answer != "s" && answer != "n");
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }while(answer != "s" && answer != "n");
 
-            return (answer == "s");
-        }
-        return false;
+        return (answer == "s");
+    }
+    return false;
 }
