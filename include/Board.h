@@ -7,7 +7,7 @@
 #include <random>
 
 //board size
-const int SIZE = 28;
+const int BOARD_SIZE = 28;
 
 class Board
 {
@@ -30,7 +30,7 @@ public:
 	int p4() {return p4_pos;}
 
 private:
-	Cell board [SIZE];
+	Cell board [BOARD_SIZE];
 	//variables that memorize the position of every player in the board; private because i want them to be modified only with the command move_to, and they must assume a value between 0 and 27
 	int p1_pos, p2_pos, p3_pos, p4_pos;
 
