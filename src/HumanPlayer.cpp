@@ -15,7 +15,7 @@ bool HumanPlayer::buy_intent() {
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }while(answer != "s" && answer != "n" && answer != "S" && answer != "N");
                 
-        if(answer == "s" && answer == "S"){
+        if(answer == "s" || answer == "S"){
             p_property.push_back(pos());
             std::sort(p_property.begin(), p_property.end());
             
@@ -37,7 +37,7 @@ bool HumanPlayer::buy_intent() {
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }while(answer != "s" && answer != "n" && answer != "S" && answer != "N");
 
-        return (answer == "s" && answer == "S");
+        return (answer == "s" || answer == "S");
     }
     return false;
 }
