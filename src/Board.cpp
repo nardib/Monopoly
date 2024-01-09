@@ -143,23 +143,27 @@ Cell& Board::get_value(int i)
 std::ostream& operator<< (std::ostream& out, Board b)
 {
 	//i print in the top the cells between 14 and 21
+	std::cout << "   ";
 	for (int i = 14; i < 22; i++)
 		std::cout << "     " << i << "    ";
 	std::cout << std::endl;
+	std::cout << "   ";
 	for (int i = 14; i < 22; i++)
 		std::cout << b.get_value(i) << ' ';
 	std::cout << std::endl;
 	//i print the side cells with the necessary space
-	std::cout << b.get_value(13) << "13                                                               22" << b.get_value(22) << std::endl;
-	std::cout << b.get_value(12) << "12                                                               23" << b.get_value(23) << std::endl;
-	std::cout << b.get_value(11) << "11                                                               24" << b.get_value(24) << std::endl;
-	std::cout << b.get_value(10) << "10                                                               25" << b.get_value(25) << std::endl;
-	std::cout << b.get_value(9) << "9                                                                26" << b.get_value(26) << std::endl;
-	std::cout << b.get_value(8) << "8                                                                27" << b.get_value(27) << std::endl;
+	std::cout << "13 " << b.get_value(13) << "                                                                   " << b.get_value(22) << " 22" << std::endl;
+	std::cout << "12 " << b.get_value(12) << "                                                                   " << b.get_value(23) << " 23" << std::endl;
+	std::cout << "11 " << b.get_value(11) << "                                                                   " << b.get_value(24) << " 24" << std::endl;
+	std::cout << "10 " << b.get_value(10) << "                                                                   " << b.get_value(25) << " 25" << std::endl;
+	std::cout << "9  " << b.get_value(9) << "                                                                   " << b.get_value(26) << " 26" << std::endl;
+	std::cout << "8  " << b.get_value(8) << "                                                                   " << b.get_value(27) << " 27" << std::endl;
 	//in the end i print the bottom cells
+	std::cout << "   ";
 	for (int i = 7; i >= 0; i--)
 		std::cout << b.get_value(i) << ' ';
 	std::cout << std::endl;
+	std::cout << "   ";
 	for (int i = 7; i >= 0; i--)
 		std::cout << "      " << i << "    ";
 	std::cout << std::endl;
