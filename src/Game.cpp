@@ -244,9 +244,11 @@ void Game::game()
     std::cout<< "L'ordine dei giocatori e': "<<po[0]<< " "<< po[1]<< " "<< po[2]<< " "<< po[3]<< ".\n";
     out<< "L'ordine dei giocatori e': "<<po[0]<< " "<< po[1]<< " "<< po[2]<< " "<< po[3]<< ".\n";
     int player_count=4;
-    int turn_count=0;
+    int turn_count=1;
     bool in_turn;
     Player* curr;
+    dice1=0;
+    dice2=1;
     while(!done)
     {
         for(int i=0; i<4; i++)
@@ -255,6 +257,11 @@ void Game::game()
             {    
                 curr= return_player(po[i]);
                 in_turn=true;
+            }
+            if(player_count!=1)
+            {
+                std::cout<<"|-------------------------------------Giocatore "<<curr->num()<<", Turno "<< turn_count<<"-------------------------------------|\n";
+                out<<"|-------------------------------------Giocatore "<<curr->num()<<", Turno "<< turn_count<<"-------------------------------------|\n";
             }
             if(player_count==1)
             {
@@ -267,7 +274,7 @@ void Game::game()
             }
             while(in_turn)
             {
-                if(check_dices() && turn_count>0)
+                if(check_dices())
                 {
                     std::cout<< "Giocatore "<< curr->num()<< " ha ottenuto un lancio doppio e svolgera' un altro turno.\n";
                     out<< "Giocatore "<< curr->num()<< " ha ottenuto un lancio doppio e svolgera' un altro turno.\n";
