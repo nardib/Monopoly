@@ -54,13 +54,13 @@ protected:
 	Player (int num, Board* b) : balance {100}, player_num {num}, player_pos {0}, board {b}, playing{true}  {if(player_num < 1 || player_num > 4) throw std::invalid_argument("Number of player must be between 1 and 4");}
 	//property owned by the player
 	std::vector<int> p_property;
+	//board where this Player plays
+	Board *board;
 
 private:
 
 	//amount of money this player has; number of player; player position in the board
 	int balance, player_num, player_pos;
-	//board where this Player plays
-	Board *board;
 	//tells if this player is playing or not
 	bool playing;
 };
