@@ -2,16 +2,6 @@
 
 #include "Game.h"
 
-bool comp(int a, int b)
-{
-    return(a<b);
-}
-
-bool compare_players(const std::pair<int, int>& player1, const std::pair<int, int>& player2)
-{
-    return(player1.first + player1.second) > (player2.first + player2.second);
-}
-
 std::vector<int> Game::player_order()
 {
     std::vector<std::pair<int, int>> players;
@@ -106,6 +96,7 @@ void Game::move_player(Player* p,int n)
 
 void Game::reset_properties(Player* p)
 {
+    //altrimenti usare il vettore in player che contiene le proprietà (più efficiente)
     for(int i=0; i< 28; i++)
     {
         if(b->get_value(i).return_owner()==(p->num()))
@@ -149,7 +140,6 @@ bool Game::upgrade(Player* p)
             out<<"Giocatore "<< p->num()<< " ha migliorato una casa in albergo sul terreno "<< p->pos()<< ".\n";
             return true;
         }
-        return false;
     }
     return false;
 }
@@ -191,8 +181,8 @@ bool Game::pay_stay(Player* p)
             }
             else
             {
-                std::cout<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
-                out<<"Giocatore "<< p->num()<< "non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
+                std::cout<<"Giocatore "<< p->num()<< " non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
+                out<<"Giocatore "<< p->num()<< " non aveva abbastanza soldi per pagare giocatore "<< (b->get_value(p->pos()).return_owner())<< " e ha speso gli ultimi "<< p->budget()<< " fiorini.\n";
                 p->decrease_balance(p->budget());
                 (return_player(b->get_value(p->pos()).return_owner()))->increase_balance(p->budget());
                 return false;
@@ -237,8 +227,6 @@ bool Game::check_dices()
 
 void Game::game()
 {
-    //const char* path = "../Logs/Log.txt";
-    //std::ofstream out(path);
     bool done=false;
     std::vector<int> po = player_order();
     std::cout<< "L'ordine dei giocatori e': "<<po[0]<< " "<< po[1]<< " "<< po[2]<< " "<< po[3]<< ".\n";
@@ -258,19 +246,25 @@ void Game::game()
                 curr= return_player(po[i]);
                 in_turn=true;
             }
-            if(player_count!=1)
+            if(player_count!=1 && return_player(po[i])->is_playing())
             {
                 std::cout<<"|-------------------------------------Giocatore "<<curr->num()<<", Turno "<< turn_count<<"-------------------------------------|\n";
                 out<<"|-------------------------------------Giocatore "<<curr->num()<<", Turno "<< turn_count<<"-------------------------------------|\n";
             }
             if(player_count==1)
             {
+                for(int i = 0; i < 4; i++)
+                {
+                    if(return_player(po[i])->budget()>0)
+                        curr = return_player(po[i]);
+                }
                 i=4;
                 std::cout<< "Giocatore "<< curr->num()<< " ha vinto la partita.\n";
                 out<< "Giocatore "<< curr->num()<< " ha vinto la partita.\n";
                 done=true;
                 in_turn=false;
                 std::cout<< curr->budget()<< " fiorini.\n";
+                out<< curr->budget()<< " fiorini.\n";
             }
             while(in_turn)
             {
@@ -333,15 +327,18 @@ void Game::game()
                     }
                 }
             }
-            std::cout<<"Giocatore " << curr->num() << " ha finito il turno.\n";
-            out<<"Giocatore " << curr->num() << " ha finito il turno.\n";
+            if(return_player(po[i])->is_playing())
+            {
+                std::cout<<"Giocatore " << curr->num() << " ha finito il turno.\n";
+                out<<"Giocatore " << curr->num() << " ha finito il turno.\n";
+                turn_count++;
+                std::cin.get();
+            }
             if(i==3)
             {
                 i==0;
             }
-            std::cin.get();
-            turn_count++;
-            if(turn_count>50)
+            if(turn_count>100)
             {
                 int richest = 0;
                 int winner = 0;

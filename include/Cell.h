@@ -36,7 +36,7 @@ public:
   //class to throw an error if a property is not bought
   class PropertyNotBought : public std::runtime_error 
   {
-  public:  PropertyNotBought(const std::string& message): std::runtime_error(message) {}
+    public:  PropertyNotBought(const std::string& message): std::runtime_error(message) {}
   };
 
 	//default constructor
@@ -58,7 +58,7 @@ public:
   int terrain_price() const;
   int house_price() const;
   int hotel_price() const;
-  int price() const;  //this function return the price for the terrain if it's not bought, and the prices for the upgrades
+  int price() const;  //return value of this cell
   int accomodation_house_price() const;
   int accomodation_hotel_price() const;
 

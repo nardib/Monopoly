@@ -6,42 +6,30 @@ int main (int argc, char *argv[])
 {
 	if(argc != 2)
 	{
-		std::cout << "Utilizzo: ./main [Human/Computer]" << std::endl;
+		std::cout << "Utilizzo: ./main [human/computer]" << std::endl;
 		return 0;
 	}
 	std::string type= static_cast<std::string>(argv[1]);
-	if(type != "Human" && type != "Computer")
+	if(type != "human" && type != "computer")
 	{
-		std::cout << "Utilizzo: ./main [Human/Computer]" << std::endl;
+		std::cout << "Utilizzo: ./main [human/computer]" << std::endl;
 		return 0;
 	}
 	Board b {8, 10, 6};
 	ComputerPlayer p2(2, &b);
 	ComputerPlayer p3(3, &b);
 	ComputerPlayer p4(4, &b);
-	std::string OutputFile = "Log.txt";
-	if(type == "Human")
+	if(type == "human")
 	{
 		HumanPlayer p1(1, &b);
 		Game g(&p1, &p2, &p3, &p4, &b);
 		g.game();
 	}
-	if(type == "Computer")
+	if(type == "computer")
 	{
 		ComputerPlayer p1(1, &b);
 		Game g(&p1, &p2, &p3, &p4, &b);
 		g.game();
 	}
-	/*
-	Cell c {static_cast<CellType>(3)};
-	c.buy_property(4);
-	c.upgrade_building();
-	c.p1 = true;
-	c.p3 = true;
-	std::cout << c << std::endl;
-	std::cout << b;
-	b.move_to(3, 35);
-	std::cout << b;
 	return 0;
-	*/
 }

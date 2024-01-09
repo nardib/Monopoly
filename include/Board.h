@@ -21,7 +21,7 @@ public:
 	//moves in the board player_num n positions forward
 	void move_to(int player_num, int n);
 
-	//returns Cell[i] value (da aggiornare in Board.cpp con il controllo che i sia valido)
+	//returns Cell[i] value
 	Cell& get_value(int i);
 	//return the position of the player in the board
 	int p1() {return p1_pos;}

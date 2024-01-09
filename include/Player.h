@@ -1,4 +1,4 @@
-//made by : Lorenzo Nardin 2066609
+//made by : Manuel Andretto 2074979
 
 #ifndef PLAYER_H
 #define PLAYER_H
@@ -13,7 +13,7 @@ public:
 
 	class NotEnoughMoney : public std::runtime_error 
 	{
-	public:  NotEnoughMoney(const std::string& message): std::runtime_error(message) {}
+		public:  NotEnoughMoney(const std::string& message): std::runtime_error(message) {}
 	};
 
 	//these functions return the values of the member variables
@@ -21,7 +21,6 @@ public:
 	int num() const {return player_num;}
 	int pos() const {return player_pos;}
 	bool is_playing() const {return playing;}
-	Board * get_board() { return board;}
 	std::vector<int> get_properties() const {return p_property;}
 
 	//move this player in the board n positions forward
@@ -38,7 +37,7 @@ public:
 	//i change the value of this player to false; once it turns to false, it can't become true anymore
 	void end_game() {playing = false; p_property.clear();}
 
-	//virtual functions that must be overrided (they )
+	//virtual functions that must be overrided
 	virtual bool buy_intent() = 0;	//this function returns true if the player would buy this property
 	virtual bool upgrade_intent() = 0;	//this function returns true if the player wants to upgrade the building in this cell
 

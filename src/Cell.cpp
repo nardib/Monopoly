@@ -26,7 +26,7 @@ void Cell::buy_property(int p)
 		throw std::invalid_argument("The player must be valid or the property is already bought");
 }
 
-//function to sell this cell if the player that bought this is no more playing
+//function to sell this cell and reset the type of building
 void Cell::sell_property()
 {
 	if(property_check == 0)
@@ -96,7 +96,7 @@ int Cell::hotel_price() const
 	}
 }
 
-//??
+//return value of this cell
 int Cell::price() const
 {
 	if(b == Building::None)

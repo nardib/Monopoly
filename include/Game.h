@@ -6,8 +6,6 @@
 #include "Player.h"
 #include "HumanPlayer.h"
 #include "ComputerPlayer.h"
-#include <algorithm>
-#include <vector>
 #include <map>
 #include <fstream>
 
@@ -66,8 +64,8 @@ class Game
 
 //function to throw a dice
 int throw_dice(int max)
-  {
-     return random(1, 6);
-  }
+{
+    return random(1, 6);
+}
 
 #endif
