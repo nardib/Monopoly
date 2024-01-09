@@ -22,7 +22,7 @@ I file del sorgente sono divisi nelle sottodirectory:
 -src: file che contengono le definizioni dei metodi di ogni classe e il sorgente del main
 -include: header delle classi che contengono le funzioni e le variabili relative a ogni classe
 
-C'è inoltre una cartella Logs che contiene i log di due partite, una tra un umano e tre computer (HumanLog.txt) e una tra quattro computer (ComputerLog.txt); essa contiene un file Log.txt, che contiene il log dell'ultima partita giocata.
+C'è inoltre una cartella Logs che contiene i log di due partite svolte in 25 turni per ogni giocatore, una tra un umano e tre computer (HumanLog.txt) e una tra quattro computer (ComputerLog.txt); essa contiene un file Log.txt, che contiene il log dell'ultima partita giocata.
 
 Schema dell'inclusione delle classi:
 
