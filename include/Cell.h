@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include <iostream>
 
-//const values per le fee e per il prezzo dei terreni
+//const values for the fees and for the terrain prices based on the types of cell
 const int ECONOMIC_TERRAIN_PRICE = 6, ECONOMIC_HOUSE_PRICE = 3, ECONOMIC_HOTEL_PRICE = 3, ECONOMIC_ACCOMODATION_HOUSE_PRICE = 2, ECONOMIC_ACCOMODATION_HOTEL_PRICE = 4;
 const int STANDARD_TERRAIN_PRICE = 10, STANDARD_HOUSE_PRICE = 5, STANDARD_HOTEL_PRICE = 5, STANDARD_ACCOMODATION_HOUSE_PRICE = 4, STANDARD_ACCOMODATION_HOTEL_PRICE = 8;
 const int LUXURY_TERRAIN_PRICE = 20, LUXURY_HOUSE_PRICE = 10, LUXURY_HOTEL_PRICE = 10, LUXURY_ACCOMODATION_HOUSE_PRICE = 7, LUXURY_ACCOMODATION_HOTEL_PRICE = 14;
@@ -41,24 +41,27 @@ public:
 
 	//default constructor
 	Cell () : type {CellType::Void}, b {Building::None}, p1 {false}, p2 {false}, p3 {false}, p4 {false}, property_check {0} {}
+  //constructor with a defined CellType
 	Cell (CellType c);
     
   //set the new owner; the argument request a number between 1 and 4 to set the property to another player
   void buy_property(int player);
 
-  //function to sell this cell if the player that bought this is no more playing
+  //function to sell this cell and reset the type of building
   void sell_property();
   
   //returns the owner, zero if not owned
   int return_owner() const {return property_check;}
+  //returns the type of this cell
   CellType return_type() const {return type;}
+  //retrurn the type of the building
   Building building_type() const {return b;}
 
   //returns prices for this cell
   int terrain_price() const;
   int house_price() const;
   int hotel_price() const;
-  int price() const;  //return value of this cell
+  int price() const;  //return value of this cell (terrain price if there's a terrain, house price if there's an house, ecc.)
   int accomodation_house_price() const;
   int accomodation_hotel_price() const;
 
@@ -82,7 +85,7 @@ private:
   Building b;
 };
 
-//overload operator<<
+//overload operator<< for class Cell
 std::ostream& operator<< (std::ostream& out, Cell cell);
 
 #endif

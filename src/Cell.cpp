@@ -5,6 +5,7 @@
 //constructor with the CellType as argument
 Cell::Cell (CellType c) : type {c}, property_check {0}, p1 {false}, p2 {false}, p3 {false}, p4 {false}, b {Building::None}
 {
+	//if this is a starting point, i put the four players on it
 	if(c == CellType::Start)
 	{
 		p1 = true;
@@ -236,6 +237,7 @@ std::ostream& operator<< (std::ostream& out, Building b)
 std::ostream& operator<< (std::ostream& out, Cell cell)
 {
 	std::cout << "|";
+	//this print the number of the player that owns this cell
 	if(cell.return_owner() == 1)
 		std::cout << "\u00B9";	//unicode code for 1's superscript number
 	else if (cell.return_owner() == 2)	
@@ -246,6 +248,7 @@ std::ostream& operator<< (std::ostream& out, Cell cell)
 		std::cout << "\u2074";	//unicode code for 4's superscript number
 	else
 		std::cout << ' ';
+	//this print the rest of the cell (type, building and players in it)
 	std::cout << cell.return_type() << cell.building_type();
 	if(cell.p1)
 		std::cout << '1';

@@ -1,4 +1,5 @@
 Progetto finale per l'insegnamento "Laboratorio di Programmazione" per l'A.A. 2023/24
+Gruppo: cpp(coders per passione)
 Collaboratori: Manuel Andretto, Lorenzo Nardin, Marco Spolverato
 
 Descrizione del progetto:
@@ -15,10 +16,20 @@ ComputerPlayer: classe che eredita le caratteristiche di Player, e gestisce le d
 
 Cell: classse che contiene le informazioni che ogni casella della tavola deve avere; in particolare gestisce il tipo di casella, la presenza o meno di costruzioni e la presenza di giocatori in essa tramite delle opportune variabili booleane
 
-Board: gestisce il tabellone, rappresentato tramite un array di oggetti Cell; essa gestisce il movimento di giocatori tra le celle e la stampa del tabellone
+Board: gestisce il tabellone, rappresentato tramite un array di oggetti Cell; essa gestisce il movimento di giocatori tra le celle e la stampa del tabellone (è stata aggiunta la funzione che permette di vedere se una cella è acquistata attraverso un numero in apice a sinistra rispetto alla lettera che indica il tipo di cella)
 
 I file del sorgente sono divisi nelle sottodirectory: 
 -src: file che contengono le definizioni dei metodi di ogni classe e il sorgente del main
 -include: header delle classi che contengono le funzioni e le variabili relative a ogni classe
 
 C'è inoltre una cartella Logs che contiene i log di due partite, una tra un umano e tre computer (HumanLog.txt) e una tra quattro computer (ComputerLog.txt); essa contiene un file Log.txt, che contiene il log dell'ultima partita giocata.
+
+Schema dell'inclusione delle classi:
+
+ ------		 -------	  --------		------
+| Cell | -> | Board | -> | Player | -> | Game |
+ ------		 -------	  --------		------
+ 							/   \
+ 				 -------------	 ----------------
+ 				| HumanPlayer |	| ComputerPlayer |
+ 			     -------------	 ----------------
