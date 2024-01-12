@@ -26,10 +26,10 @@ C'è inoltre una cartella Logs che contiene i log di due partite, una tra un uma
 
 Schema dell'inclusione delle classi:
 
- ------		 -------	  --------		------
+ ------      -------      --------      ------
 | Cell | -> | Board | -> | Player | -> | Game |
- ------		 -------	  --------		------
- 							/   \
- 				 -------------	 ----------------
- 				| HumanPlayer |	| ComputerPlayer |
- 			     -------------	 ----------------
+ ------      -------      --------      ------
+                            /   \
+ 				           -------------   ----------------
+ 				          | HumanPlayer |	| ComputerPlayer |
+                -------------	  ----------------
