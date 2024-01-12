@@ -4,32 +4,32 @@
 
 int main (int argc, char *argv[])
 {
-	if(argc != 2)
+	if(argc != 2)	//Check if the number of arguments is correct
 	{
 		std::cout << "Utilizzo: ./main [human/computer]" << std::endl;
 		return 0;
 	}
 	std::string type= static_cast<std::string>(argv[1]);
-	if(type != "human" && type != "computer")
+	if(type != "human" && type != "computer")	//Check if the argument is correct
 	{
 		std::cout << "Utilizzo: ./main [human/computer]" << std::endl;
 		return 0;
 	}
-	Board b {8, 10, 6};
+	Board b {8, 10, 6};			//Create the board
 	ComputerPlayer p2(2, &b);
 	ComputerPlayer p3(3, &b);
 	ComputerPlayer p4(4, &b);
-	if(type == "human")
+	if(type == "human")			//Create the Human Player
 	{
 		HumanPlayer p1(1, &b);
 		Game g(&p1, &p2, &p3, &p4, &b);
-		g.game();
+		g.game();				//Start the game
 	}
-	if(type == "computer")
+	if(type == "computer")		//Create the Computer Player
 	{
 		ComputerPlayer p1(1, &b);
 		Game g(&p1, &p2, &p3, &p4, &b);
-		g.game();
+		g.game();				//Start the game
 	}
 	return 0;
 }
