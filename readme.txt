@@ -30,6 +30,6 @@ Schema dell'inclusione delle classi:
 | Cell | -> | Board | -> | Player | -> | Game |
  ------      -------      --------      ------
                             /   \
- 				           -------------   ----------------
- 				          | HumanPlayer |	| ComputerPlayer |
-                -------------	  ----------------
+             -------------      ----------------
+            | HumanPlayer |    | ComputerPlayer |
+             -------------      ----------------
