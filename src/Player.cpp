@@ -2,13 +2,14 @@
 
 #include "Player.h"
 
-//move this player in the board
+//moves the player in the board
 void Player::move(int n)
 {
 	board->move_to(player_num, n);
 	player_pos = get_pos_in_board();
 }
 
+//gets pos in the board; returns the index in the array of the board
 int Player::get_pos_in_board() 
 {
 	switch (player_num)

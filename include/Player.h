@@ -26,7 +26,7 @@ public:
 	//move this player in the board n positions forward
 	void move(int n);
 
-	//get pos in the board; return the index in the array of the board
+	//gets pos in the board; returns the index in the array of the board
 	//it does a linear search in the array and memorize that value in a variable
 	int get_pos_in_board();
 
@@ -34,14 +34,15 @@ public:
 	void decrease_balance (int n);
 	void increase_balance (int n);
 
-	//i change the value of this player to false; once it turns to false, it can't become true anymore
+	//changes the value of this player to false; once it turns to false, it can't become true anymore
+	//clears the p_property vector
 	void end_game() {playing = false; p_property.clear();}
 
 	//virtual functions that must be overrided
-	virtual bool buy_intent() = 0;	//this function returns true if the player would buy this property
+	virtual bool buy_intent() = 0;		//this function returns true if the player would buy this property
 	virtual bool upgrade_intent() = 0;	//this function returns true if the player wants to upgrade the building in this cell
 
-	//copy construcor and assignment disabled
+	//copies constructor and disables assignment 	
 	Player (const Player&) = delete;
 	Player& operator= (const Player&) = delete;
 

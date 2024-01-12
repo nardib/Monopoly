@@ -7,18 +7,14 @@
 
 class HumanPlayer : public Player
 {
-
 public:
 
     //default constructor
     HumanPlayer (int n, Board* b):Player(n, b){}
-
-    //function that checks if you want to buy the property 
-    bool buy_intent() override;
-
-    //function that checks if you want to upgrade the building
-    bool upgrade_intent() override;
     
+    //overrided virtual functions  
+    bool buy_intent() override;         //function that checks if you want to buy the property 
+    bool upgrade_intent() override;     //function that checks if you want to upgrade the building
 };
 
 #endif
