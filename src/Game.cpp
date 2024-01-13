@@ -359,7 +359,7 @@ void Game::game()
                         std::vector<int> property_list = return_player(j+1)->get_properties();
                         if(property_list.size()>0)
                         {
-                            std::cout<<"Proprieta' Giocatore "<< j+1<< ": ";
+                            std::cout<<"Proprieta' Giocatore "<< j+1 <<" ("<<return_player(j+1)->budget()<< " fiorini): ";
                             for(int k=0; k<property_list.size(); k++)
                             {
                                 std::cout<< property_list[k]<< " ";
