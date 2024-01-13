@@ -3,83 +3,84 @@
 #include "Game.h"
 
 //Function to determine the order of players
-std::vector<int> Game::player_order()
+std::vector<int> Game::player_order() 
 {
-    std::vector<std::pair<int, int>> players;
-    std::vector<int> order;
-    int d1, d2;
-
-    // Loop for each player
-    for (int i = 0; i < 4; i++) 
+    std::vector<std::pair<int, std::pair<int, int>>> players(4);
+    for (int i = 0; i < 4; ++i) 
     {
-        d1 = throw_dices().first;
-        d2 = throw_dices().second;
-        std::cout << "Giocatore " << i+1<< " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
-        players.push_back({i+1, (d1 + d2)});
+        players[i] = {i + 1, throw_dices()};
+        std::cout << "Giocatore " << players[i].first << "  ha tirato i dadi ottenendo un valore di  " << players[i].second.first << " + " << players[i].second.second << " = " << players[i].second.first + players[i].second.second << ".\n";
+        out<< "Giocatore " << players[i].first << "  ha tirato i dadi ottenendo un valore di  " << players[i].second.first << " + " << players[i].second.second << " = " << players[i].second.first + players[i].second.second << ".\n";
     }
 
-    // Sort players by score in descending order
-    std::sort(players.begin(), players.end(), [](const std::pair<int, int>& a, const std::pair<int, int>& b) {return a.second > b.second;});
-
-    std::vector<int> tied_players = check_tie(players);
-
-    while (!tied_players.empty())
+    std::sort(players.begin(), players.end(), [](const std::pair<int, std::pair<int, int>>& a, const std::pair<int, std::pair<int, int>>& b) 
     {
-        for (int i = 0; i < tied_players.size(); i++) 
+        return a.second.first + a.second.second > b.second.first + b.second.second;
+    });
+
+    std::vector<int> order(4);
+    int i = 0;
+    while (i < 4) 
+    {
+        int j = i;
+        // Find all players with the same score
+        while (j < 3 && players[j].second.first + players[j].second.second == players[j + 1].second.first + players[j + 1].second.second) 
         {
-            d1 = throw_dices().first;
-            d2 = throw_dices().second;
-            std::cout << "Giocatore " << players[tied_players[i]].first << " ha tirato i dadi ottenendo un valore di " << d1 << " + " << d2 << " = " << d1 + d2 << ".\n";
-            players[tied_players[i]].second = d1 + d2;  // Update the score of the player
+            ++j;
         }
 
-        // Sort the players by score in descending order
-        std::sort(players.begin(), players.end(), [](const std::pair<int, int>& a, const std::pair<int, int>& b) 
+        // If there are ties, resolve them
+        if (j > i) 
         {
-            return a.second > b.second;
-        });
+            std::vector<std::pair<int, std::pair<int, int>>> tied_players;
+            for (int k = i; k <= j; ++k) 
+            {
+                tied_players.push_back({players[k].first, throw_dices()});
+                std::cout << "Giocatore " << tied_players.back().first << "  ha tirato i dadi ottenendo un valore di  " << tied_players.back().second.first << " + " << tied_players.back().second.second << " = " << tied_players.back().second.first + tied_players.back().second.second << ".\n";
+                out<< "Giocatore " << tied_players.back().first << "  ha tirato i dadi ottenendo un valore di  " << tied_players.back().second.first << " + " << tied_players.back().second.second << " = " << tied_players.back().second.first + tied_players.back().second.second << ".\n";
+            }
 
-        // Check for ties again
-        tied_players = check_tie(players);
-    }
+            // Keep re-throwing dices until the tie is resolved
+            bool tie_resolved = false;
+            while (!tie_resolved) 
+            {
+                std::sort(tied_players.begin(), tied_players.end(), [](const std::pair<int, std::pair<int, int>>& a, const std::pair<int, std::pair<int, int>>& b) 
+                {
+                    return a.second.first + a.second.second > b.second.first + b.second.second;
+                });
 
-    // Create the order of players
-    for (const auto& player : players) 
-    {
-        order.push_back(player.first);
-    }
+                tie_resolved = true;
+                for (int k = 0; k < tied_players.size() - 1; ++k) 
+                {
+                    if (tied_players[k].second.first + tied_players[k].second.second == tied_players[k + 1].second.first + tied_players[k + 1].second.second) 
+                    {
+                        tied_players[k].second = throw_dices();
+                        tied_players[k + 1].second = throw_dices();
+                        std::cout << "Giocatore " << tied_players[k].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k].second.first << " + " << tied_players[k].second.second << " = " << tied_players[k].second.first + tied_players[k].second.second << ".\n";
+                        out<< "Giocatore " << tied_players[k].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k].second.first << " + " << tied_players[k].second.second << " = " << tied_players[k].second.first + tied_players[k].second.second << ".\n";
+                        std::cout << "Giocatore " << tied_players[k + 1].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k + 1].second.first << " + " << tied_players[k + 1].second.second << " = " << tied_players[k + 1].second.first + tied_players[k + 1].second.second << ".\n";
+                        out<< "Giocatore " << tied_players[k + 1].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k + 1].second.first << " + " << tied_players[k + 1].second.second << " = " << tied_players[k + 1].second.first + tied_players[k + 1].second.second << ".\n";
+                        tie_resolved = false;
+                        break;
+                    }
+                }
+            }
 
-    // Create the order of players
-    for (const auto& player : players) 
-    {
-        order.push_back(player.first);
+            for (int k = 0; k < tied_players.size(); ++k) 
+            {
+                order[i + k] = tied_players[k].first;
+            }
+        }
+        else 
+        {
+            order[i] = players[i].first;
+        }
+        i = j + 1;
     }
 
     return order;
 }
 
-std::vector<int> Game::check_tie(const std::vector<std::pair<int, int>>& players)
-{
-    std::vector<int> ties;
-    std::map<int, std::vector<int>> scores;
-
-    // Group players by score
-    for (int i = 0; i < players.size(); i++) 
-    {
-        scores[players[i].second].push_back(i);
-    }
-
-    // Check for ties
-    for (const auto& score : scores) 
-    {
-        if (score.second.size() > 1)  // If more than one player has this score
-        {
-            ties.insert(ties.end(), score.second.begin(), score.second.end());  // Add all tied players to ties
-        }
-    }
-
-    return ties;
-}
 
 //Function to handle crossing the "go" cell
 void Game::cross_go(Player* p)
