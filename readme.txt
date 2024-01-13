@@ -22,14 +22,21 @@ I file del sorgente sono divisi nelle sottodirectory:
 -src: file che contengono le definizioni dei metodi di ogni classe e il sorgente del main
 -include: header delle classi che contengono le funzioni e le variabili relative a ogni classe
 
-C'è inoltre una cartella Logs che contiene i log di due partite svolte in 25 turni per ogni giocatore, una tra un umano e tre computer (HumanLog.txt) e una tra quattro computer (ComputerLog.txt); essa contiene un file Log.txt, che contiene il log dell'ultima partita giocata.
+C'è inoltre una cartella Logs che contiene i log di due partite svolte in 25 turni per ogni giocatore, una tra un umano e tre computer (HumanLog.txt) e una tra quattro computer (ComputerLog.txt); essa conterrà (ogni volta che viene eseguito il programma) anche un file Log.txt, che contiene il log dell'ultima partita giocata.
 
 Schema dell'inclusione delle classi:
 
  ------      -------      --------      ------
 | Cell | -> | Board | -> | Player | -> | Game |
  ------      -------      --------      ------
-                            /   \
-             -------------      ----------------
-            | HumanPlayer |    | ComputerPlayer |
-             -------------      ----------------
+                            /   \  (queste sono classi figlie)
+              -------------      ----------------
+             | HumanPlayer |    | ComputerPlayer |
+              -------------      ----------------
+
+L'intero progetto è compilabile tramite CMake all'interno di una oppurtuna directory build (da creare) e l'eseguibile si troverà nella stessa directory con il nome di main.
+
+Il progetto è stato diviso in questo modo (gli autori dei vari file sono comunque riportati in testa a ogni file):
+-Manuel Andretto ha sviluppato la classe Player e le relative classi figlie
+-Lorenzo Nardin ha sviluppato le classi Cell e Board
+-Marco Spolverato ha sviluppato la classe Game e il file che contiene il main

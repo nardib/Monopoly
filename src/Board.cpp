@@ -16,6 +16,7 @@ int random(int min, int max)
 	return distribution(gen);
 }
 
+//constructor for class Board that initialize a board with a defined number of economic, standard and luxury cells
 Board::Board(int n_eco, int n_std, int n_lux) : p1_pos {0}, p2_pos {0}, p3_pos {0}, p4_pos{0}
 {
 	if(n_eco + n_std + n_lux != 24)

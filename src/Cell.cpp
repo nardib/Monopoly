@@ -163,6 +163,7 @@ void Cell::upgrade_building()
 	}
 }
 
+//returns if the player pn is in this cell
 bool Cell::is_pn_here(int n) const
 {
 	switch (n)
