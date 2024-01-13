@@ -1,576 +1,569 @@
-L'ordine dei giocatori e': 2 1 4 3.
+L'ordine dei giocatori e': 2 3 4 1.
 |-------------------------------------Giocatore 2, Turno 1-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
-Giocatore 2 e' arrivato alla casella 7.
+Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 5 = 9.
+Giocatore 2 e' arrivato alla casella 9.
 Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 2-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 4 + 2 = 6.
-Giocatore 1 e' arrivato alla casella 6.
-Giocatore 1 ha acquistato il terreno 6.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 3-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
-Giocatore 4 e' arrivato alla casella 7.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 4-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 6 = 10.
-Giocatore 3 e' arrivato alla casella 10.
+|-------------------------------------Giocatore 3, Turno 1-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 1 = 5.
+Giocatore 3 e' arrivato alla casella 5.
 Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 5-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
-Giocatore 2 e' arrivato alla casella 19.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
-Giocatore 2 e' arrivato alla casella 3.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 2 ha acquistato il terreno 3.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 2 = 8.
-Giocatore 2 e' arrivato alla casella 11.
+|-------------------------------------Giocatore 4, Turno 1-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
+Giocatore 4 e' arrivato alla casella 10.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 1-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 2 = 5.
+Giocatore 1 e' arrivato alla casella 5.
+Giocatore 1 ha acquistato il terreno 5.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 2-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
+Giocatore 2 e' arrivato alla casella 16.
 Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 6-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 6 = 11.
+|-------------------------------------Giocatore 3, Turno 2-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
+Giocatore 3 e' arrivato alla casella 12.
+Giocatore 3 ha acquistato il terreno 12.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 2-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 5 = 9.
+Giocatore 4 e' arrivato alla casella 19.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 2-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
+Giocatore 1 e' arrivato alla casella 9.
+Giocatore 1 ha acquistato il terreno 9.
+Giocatore 1 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
 Giocatore 1 e' arrivato alla casella 17.
 Giocatore 1 ha acquistato il terreno 17.
 Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 7-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 6 = 9.
-Giocatore 4 e' arrivato alla casella 16.
-Giocatore 4 ha acquistato il terreno 16.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 8-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 1 = 2.
-Giocatore 3 e' arrivato alla casella 12.
-Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
-Giocatore 3 e' arrivato alla casella 19.
-Giocatore 3 ha acquistato il terreno 19.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 9-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
-Giocatore 2 e' arrivato alla casella 21.
+|-------------------------------------Giocatore 2, Turno 3-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 2 = 3.
+Giocatore 2 e' arrivato alla casella 19.
 Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 10-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 3 = 4.
-Giocatore 1 e' arrivato alla casella 21.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 11-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
-Giocatore 4 e' arrivato alla casella 24.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 12-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 5 = 10.
-Giocatore 3 e' arrivato alla casella 1.
+|-------------------------------------Giocatore 3, Turno 3-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
+Giocatore 3 e' arrivato alla casella 24.
+Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
+Giocatore 3 e' arrivato alla casella 7.
 Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
-Giocatore 3 e' arrivato alla casella 8.
 Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 13-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 5 = 7.
-Giocatore 2 e' arrivato alla casella 0.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 14-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
-Giocatore 1 e' arrivato alla casella 0.
-Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
+|-------------------------------------Giocatore 4, Turno 3-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
+Giocatore 4 e' arrivato alla casella 26.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 3-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
+Giocatore 1 e' arrivato alla casella 24.
+Giocatore 1 ha acquistato il terreno 24.
 Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 15-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
-Giocatore 4 e' arrivato alla casella 4.
+|-------------------------------------Giocatore 2, Turno 4-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
+Giocatore 2 e' arrivato alla casella 23.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 4-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
+Giocatore 3 e' arrivato alla casella 17.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 4-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 6 = 9.
+Giocatore 4 e' arrivato alla casella 7.
 Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 2 = 6.
-Giocatore 4 e' arrivato alla casella 10.
-Giocatore 4 ha acquistato il terreno 10.
 Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 16-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
-Giocatore 3 e' arrivato alla casella 16.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
-Giocatore 3 e' arrivato alla casella 21.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 17-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
-Giocatore 2 e' arrivato alla casella 7.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 18-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
-Giocatore 1 e' arrivato alla casella 4.
-Giocatore 1 ha acquistato il terreno 4.
+|-------------------------------------Giocatore 1, Turno 4-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
+Giocatore 1 e' arrivato alla casella 3.
+Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 1 ha acquistato il terreno 3.
 Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 19-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
-Giocatore 4 e' arrivato alla casella 14.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
-Giocatore 4 e' arrivato alla casella 18.
+|-------------------------------------Giocatore 2, Turno 5-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
+Giocatore 2 e' arrivato alla casella 27.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 5-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 6 = 9.
+Giocatore 3 e' arrivato alla casella 26.
+Giocatore 3 ha acquistato il terreno 26.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 5-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
+Giocatore 4 e' arrivato alla casella 15.
+Giocatore 4 ha acquistato il terreno 15.
 Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 20-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 6 = 11.
+|-------------------------------------Giocatore 1, Turno 5-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 6 + 1 = 7.
+Giocatore 1 e' arrivato alla casella 10.
+Giocatore 1 ha acquistato il terreno 10.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 6-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 5 = 6.
+Giocatore 2 e' arrivato alla casella 5.
+Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 6-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 5 = 6.
 Giocatore 3 e' arrivato alla casella 4.
 Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
 Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 21-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
-Giocatore 2 e' arrivato alla casella 15.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 22-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 5 = 6.
-Giocatore 1 e' arrivato alla casella 10.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 23-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
-Giocatore 4 e' arrivato alla casella 25.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 24-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 1 = 5.
-Giocatore 3 e' arrivato alla casella 9.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 25-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
-Giocatore 2 e' arrivato alla casella 23.
-Giocatore 2 ha acquistato il terreno 23.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 26-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
-Giocatore 1 e' arrivato alla casella 18.
-Giocatore 1 ha acquistato il terreno 18.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 27-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 6 = 9.
+|-------------------------------------Giocatore 4, Turno 6-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
+Giocatore 4 e' arrivato alla casella 27.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 5 = 7.
 Giocatore 4 e' arrivato alla casella 6.
 Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
 Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 28-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 5 = 6.
-Giocatore 3 e' arrivato alla casella 15.
-Giocatore 3 ha acquistato il terreno 15.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 29-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
-Giocatore 2 e' arrivato alla casella 3.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
+|-------------------------------------Giocatore 1, Turno 6-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
+Giocatore 1 e' arrivato alla casella 16.
+Giocatore 1 ha acquistato il terreno 16.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 7-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
+Giocatore 2 e' arrivato alla casella 11.
 Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 30-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 6 = 9.
+|-------------------------------------Giocatore 3, Turno 7-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 2 = 5.
+Giocatore 3 e' arrivato alla casella 9.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 7-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 2 = 8.
+Giocatore 4 e' arrivato alla casella 14.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 7-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 6 = 11.
 Giocatore 1 e' arrivato alla casella 27.
 Giocatore 1 ha acquistato il terreno 27.
 Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 31-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 2 = 3.
-Giocatore 4 e' arrivato alla casella 9.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 32-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
-Giocatore 3 e' arrivato alla casella 21.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 33-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 1 = 5.
-Giocatore 2 e' arrivato alla casella 8.
+|-------------------------------------Giocatore 2, Turno 8-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 5 = 7.
+Giocatore 2 e' arrivato alla casella 18.
 Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 34-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
-Giocatore 1 e' arrivato alla casella 10.
-Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 35-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
-Giocatore 4 e' arrivato alla casella 21.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
-Giocatore 4 e' arrivato alla casella 0.
-Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 36-------------------------------------|
+|-------------------------------------Giocatore 3, Turno 8-------------------------------------|
 Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
-Giocatore 3 e' arrivato alla casella 1.
-Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 37-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 3 = 9.
-Giocatore 2 e' arrivato alla casella 17.
+Giocatore 3 e' arrivato alla casella 17.
 La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 38-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
-Giocatore 1 e' arrivato alla casella 16.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 39-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
-Giocatore 4 e' arrivato alla casella 11.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 40-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
-Giocatore 3 e' arrivato alla casella 7.
 Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 41-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 3 = 6.
-Giocatore 2 e' arrivato alla casella 23.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
-Giocatore 2 e' arrivato alla casella 5.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 42-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
-Giocatore 1 e' arrivato alla casella 21.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 43-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
-Giocatore 4 e' arrivato alla casella 19.
-La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+|-------------------------------------Giocatore 4, Turno 8-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
+Giocatore 4 e' arrivato alla casella 18.
+Giocatore 4 ha acquistato il terreno 18.
 Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 44-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
-Giocatore 3 e' arrivato alla casella 14.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 45-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 1 = 3.
-Giocatore 2 e' arrivato alla casella 8.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 46-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 6 + 1 = 7.
-Giocatore 1 e' arrivato alla casella 0.
+|-------------------------------------Giocatore 1, Turno 8-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
+Giocatore 1 e' arrivato alla casella 3.
 Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 47-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
-Giocatore 4 e' arrivato alla casella 26.
-Giocatore 4 ha acquistato il terreno 26.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 48-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
-Giocatore 3 e' arrivato alla casella 21.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 49-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
-Giocatore 2 e' arrivato alla casella 14.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 50-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
-Giocatore 1 e' arrivato alla casella 4.
-Giocatore 1 ha costruito una casa sul terreno 4.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 51-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
-Giocatore 4 e' arrivato alla casella 10.
-Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
-Giocatore 4 e' arrivato alla casella 17.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 52-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
-Giocatore 3 e' arrivato alla casella 4.
-Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 3 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 4.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 53-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 3 = 6.
-Giocatore 2 e' arrivato alla casella 20.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 3 = 6.
-Giocatore 2 e' arrivato alla casella 26.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 5 = 6.
-Giocatore 2 e' arrivato alla casella 4.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 2 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 4.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 54-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 5 = 7.
+Giocatore 1 ha costruito una casa sul terreno 3.
+Giocatore 1 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
 Giocatore 1 e' arrivato alla casella 11.
 Giocatore 1 ha acquistato il terreno 11.
 Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 55-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 1 = 2.
-Giocatore 4 e' arrivato alla casella 19.
-La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
-Giocatore 4 e' arrivato alla casella 27.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
-Giocatore 4 e' arrivato alla casella 4.
-Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 4 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 4.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 56-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 2 + 6 = 8.
-Giocatore 3 e' arrivato alla casella 12.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 57-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
-Giocatore 2 e' arrivato alla casella 8.
-Giocatore 2 ha acquistato il terreno 8.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 4 = 9.
-Giocatore 2 e' arrivato alla casella 17.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 58-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
-Giocatore 1 e' arrivato alla casella 17.
-Giocatore 1 ha costruito una casa sul terreno 17.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 59-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
-Giocatore 4 e' arrivato alla casella 10.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 60-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
-Giocatore 3 e' arrivato alla casella 19.
-Giocatore 3 ha costruito una casa sul terreno 19.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 61-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 1 = 2.
-Giocatore 2 e' arrivato alla casella 19.
-Giocatore 2 ha pagato 2 fiorini a giocatore 3 per pernottamento in una casa nella casella 19.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 6 = 11.
-Giocatore 2 e' arrivato alla casella 2.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 62-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 3 = 4.
-Giocatore 1 e' arrivato alla casella 21.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 63-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
-Giocatore 4 e' arrivato alla casella 18.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 64-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
-Giocatore 3 e' arrivato alla casella 1.
-Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 65-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 3 = 9.
-Giocatore 2 e' arrivato alla casella 11.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 66-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 4 + 2 = 6.
-Giocatore 1 e' arrivato alla casella 27.
-Giocatore 1 ha costruito una casa sul terreno 27.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 67-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
-Giocatore 4 e' arrivato alla casella 24.
-Giocatore 4 ha acquistato il terreno 24.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 68-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
-Giocatore 3 e' arrivato alla casella 5.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 69-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
-Giocatore 2 e' arrivato alla casella 19.
-Giocatore 2 ha pagato 2 fiorini a giocatore 3 per pernottamento in una casa nella casella 19.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 70-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 3 = 6.
-Giocatore 1 e' arrivato alla casella 5.
-Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 1 ha acquistato il terreno 5.
-Giocatore 1 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 5 = 10.
-Giocatore 1 e' arrivato alla casella 15.
-La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 1 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
-Giocatore 1 e' arrivato alla casella 21.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 71-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
-Giocatore 4 e' arrivato alla casella 4.
-Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 4 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 4.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
-Giocatore 4 e' arrivato alla casella 11.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 72-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 2 + 3 = 5.
-Giocatore 3 e' arrivato alla casella 10.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 73-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
+|-------------------------------------Giocatore 2, Turno 9-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
 Giocatore 2 e' arrivato alla casella 25.
 Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 74-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
-Giocatore 1 e' arrivato alla casella 1.
-Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 1 ha acquistato il terreno 1.
-Giocatore 1 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 6 = 8.
-Giocatore 1 e' arrivato alla casella 9.
-Giocatore 1 ha acquistato il terreno 9.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 75-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 2 = 8.
-Giocatore 4 e' arrivato alla casella 19.
-Giocatore 4 ha pagato 2 fiorini a giocatore 3 per pernottamento in una casa nella casella 19.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 76-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
-Giocatore 3 e' arrivato alla casella 18.
+|-------------------------------------Giocatore 3, Turno 9-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
+Giocatore 3 e' arrivato alla casella 24.
 La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
 Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 77-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
+|-------------------------------------Giocatore 4, Turno 9-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
+Giocatore 4 e' arrivato alla casella 26.
+La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 1 = 5.
+Giocatore 4 e' arrivato alla casella 3.
+Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 4 ha pagato 7 fiorini a giocatore 1 per pernottamento in una casa nella casella 3.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 9-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 5 = 7.
+Giocatore 1 e' arrivato alla casella 18.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 10-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
 Giocatore 2 e' arrivato alla casella 5.
 Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
 La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
-Giocatore 2 e' arrivato alla casella 15.
-La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
 Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 78-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
-Giocatore 1 e' arrivato alla casella 20.
-Giocatore 1 ha acquistato il terreno 20.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 79-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
-Giocatore 4 e' arrivato alla casella 25.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 80-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
-Giocatore 3 e' arrivato alla casella 25.
-Giocatore 3 ha acquistato il terreno 25.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 81-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 3 = 5.
-Giocatore 2 e' arrivato alla casella 20.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 82-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 3 = 4.
-Giocatore 1 e' arrivato alla casella 24.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 83-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 3 = 4.
-Giocatore 4 e' arrivato alla casella 1.
-Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 84-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 1 = 5.
-Giocatore 3 e' arrivato alla casella 2.
+|-------------------------------------Giocatore 3, Turno 10-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
+Giocatore 3 e' arrivato alla casella 8.
 Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 3 ha acquistato il terreno 2.
+Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 2 = 5.
+Giocatore 3 e' arrivato alla casella 13.
 Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 85-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 6 = 9.
-Giocatore 2 e' arrivato alla casella 1.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 86-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
-Giocatore 1 e' arrivato alla casella 3.
-Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 2 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 87-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
-Giocatore 4 e' arrivato alla casella 5.
-La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 3 = 6.
+|-------------------------------------Giocatore 4, Turno 10-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 6 = 8.
 Giocatore 4 e' arrivato alla casella 11.
 La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
-Giocatore 4 e' arrivato alla casella 16.
 Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 88-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 1 = 7.
+|-------------------------------------Giocatore 1, Turno 10-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
+Giocatore 1 e' arrivato alla casella 26.
+La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 11-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 1 = 2.
+Giocatore 2 e' arrivato alla casella 7.
+Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 3 = 5.
+Giocatore 2 e' arrivato alla casella 12.
+La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 11-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 2 + 3 = 5.
+Giocatore 3 e' arrivato alla casella 18.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 11-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
+Giocatore 4 e' arrivato alla casella 23.
+Giocatore 4 ha acquistato il terreno 23.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 1 = 5.
+Giocatore 4 e' arrivato alla casella 0.
+Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 11-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
+Giocatore 1 e' arrivato alla casella 8.
+Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 1 ha acquistato il terreno 8.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 12-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
+Giocatore 2 e' arrivato alla casella 19.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 12-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 4 = 9.
+Giocatore 3 e' arrivato alla casella 27.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 12-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 6 = 10.
+Giocatore 4 e' arrivato alla casella 10.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 12-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
+Giocatore 1 e' arrivato alla casella 15.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 13-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 3 = 9.
+Giocatore 2 e' arrivato alla casella 0.
+Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 13-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 2 = 3.
+Giocatore 3 e' arrivato alla casella 2.
+Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 13-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 1 = 5.
+Giocatore 4 e' arrivato alla casella 15.
+Giocatore 4 ha costruito una casa sul terreno 15.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 13-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
+Giocatore 1 e' arrivato alla casella 21.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 14-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 2 = 6.
+Giocatore 2 e' arrivato alla casella 6.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 14-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
 Giocatore 3 e' arrivato alla casella 9.
 La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
 Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 89-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
-Giocatore 2 e' arrivato alla casella 8.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 90-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 6 = 7.
-Giocatore 1 e' arrivato alla casella 10.
-La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 91-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 2 = 6.
-Giocatore 4 e' arrivato alla casella 22.
+|-------------------------------------Giocatore 4, Turno 14-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
+Giocatore 4 e' arrivato alla casella 20.
 Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 92-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 2 + 6 = 8.
-Giocatore 3 e' arrivato alla casella 17.
-Giocatore 3 ha pagato 2 fiorini a giocatore 1 per pernottamento in una casa nella casella 17.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 93-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
-Giocatore 2 e' arrivato alla casella 14.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 94-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
-Giocatore 1 e' arrivato alla casella 15.
-La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+|-------------------------------------Giocatore 1, Turno 14-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 1 = 3.
+Giocatore 1 e' arrivato alla casella 24.
+Giocatore 1 ha costruito una casa sul terreno 24.
 Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 95-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 5 = 9.
-Giocatore 4 e' arrivato alla casella 3.
+|-------------------------------------Giocatore 2, Turno 15-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
+Giocatore 2 e' arrivato alla casella 11.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 15-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 5 = 10.
+Giocatore 3 e' arrivato alla casella 19.
+Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
+Giocatore 3 e' arrivato alla casella 24.
+Giocatore 3 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 24.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 15-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
+Giocatore 4 e' arrivato alla casella 2.
 Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 2 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha acquistato il terreno 2.
 Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 96-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 6 = 11.
-Giocatore 3 e' arrivato alla casella 0.
-Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
-Giocatore 3 ha finito il turno.
-|-------------------------------------Giocatore 2, Turno 97-------------------------------------|
-Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
-Giocatore 2 e' arrivato alla casella 22.
-Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
-Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 6 = 8.
-Giocatore 2 e' arrivato alla casella 2.
-Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
-La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 2 ha finito il turno.
-|-------------------------------------Giocatore 1, Turno 98-------------------------------------|
-Giocatore 1 ha tirato i dadi ottenendo un valore di 5 + 3 = 8.
-Giocatore 1 e' arrivato alla casella 23.
-La casella e' di proprieta' di 2 ma, senza alcun edificio, il transito e' gratuito.
+|-------------------------------------Giocatore 1, Turno 15-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 1 = 3.
+Giocatore 1 e' arrivato alla casella 27.
+Giocatore 1 ha costruito una casa sul terreno 27.
 Giocatore 1 ha finito il turno.
-|-------------------------------------Giocatore 4, Turno 99-------------------------------------|
-Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 3 = 5.
-Giocatore 4 e' arrivato alla casella 8.
-La casella e' di proprieta' di 2 ma, senza alcun edificio, il transito e' gratuito.
-Giocatore 4 ha finito il turno.
-|-------------------------------------Giocatore 3, Turno 100-------------------------------------|
-Giocatore 3 ha tirato i dadi ottenendo un valore di 2 + 5 = 7.
+|-------------------------------------Giocatore 2, Turno 16-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 3 = 5.
+Giocatore 2 e' arrivato alla casella 16.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 16-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 3 = 6.
+Giocatore 3 e' arrivato alla casella 2.
+Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
 Giocatore 3 e' arrivato alla casella 7.
 Giocatore 3 ha finito il turno.
-Giocatore 2 ha vinto la partita.
-Giocatore 1: 117 fiorini.
-Giocatore 2: 236 fiorini.
-Giocatore 3: 191 fiorini.
-Giocatore 4: 204 fiorini.
+|-------------------------------------Giocatore 4, Turno 16-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 6 + 2 = 8.
+Giocatore 4 e' arrivato alla casella 10.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 16-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
+Giocatore 1 e' arrivato alla casella 7.
+Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 17-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
+Giocatore 2 e' arrivato alla casella 20.
+Giocatore 2 ha acquistato il terreno 20.
+Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 2 ha tirato i dadi ottenendo un valore di 6 + 6 = 12.
+Giocatore 2 e' arrivato alla casella 4.
+Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
+Giocatore 2 e' arrivato alla casella 11.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 17-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
+Giocatore 3 e' arrivato alla casella 18.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 17-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 5 = 10.
+Giocatore 4 e' arrivato alla casella 20.
+La casella e' di proprieta' di 2 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
+Giocatore 4 e' arrivato alla casella 24.
+Giocatore 4 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 24.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 4 = 9.
+Giocatore 4 e' arrivato alla casella 5.
+Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 17-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
+Giocatore 1 e' arrivato alla casella 14.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 18-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 4 = 9.
+Giocatore 2 e' arrivato alla casella 20.
+Giocatore 2 ha costruito una casa sul terreno 20.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 18-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 5 + 5 = 10.
+Giocatore 3 e' arrivato alla casella 0.
+Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 3 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
+Giocatore 3 e' arrivato alla casella 7.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 18-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
+Giocatore 4 e' arrivato alla casella 12.
+La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 18-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 2 = 3.
+Giocatore 1 e' arrivato alla casella 17.
+Giocatore 1 ha costruito una casa sul terreno 17.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 19-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
+Giocatore 2 e' arrivato alla casella 24.
+Giocatore 2 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 24.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 19-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
+Giocatore 3 e' arrivato alla casella 14.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 19-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 4 + 5 = 9.
+Giocatore 4 e' arrivato alla casella 21.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 19-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 4 + 5 = 9.
+Giocatore 1 e' arrivato alla casella 26.
+La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 20-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 3 + 5 = 8.
+Giocatore 2 e' arrivato alla casella 4.
+Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 20-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
+Giocatore 3 e' arrivato alla casella 25.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 20-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 1 = 6.
+Giocatore 4 e' arrivato alla casella 27.
+Giocatore 4 ha pagato 4 fiorini a giocatore 1 per pernottamento in una casa nella casella 27.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 20-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 4 + 2 = 6.
+Giocatore 1 e' arrivato alla casella 4.
+Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 1 ha acquistato il terreno 4.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 21-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 1 = 2.
+Giocatore 2 e' arrivato alla casella 6.
+Giocatore 2 ha acquistato il terreno 6.
+Giocatore 2 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 2 = 3.
+Giocatore 2 e' arrivato alla casella 9.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 21-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
+Giocatore 3 e' arrivato alla casella 2.
+Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 21-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 1 = 2.
+Giocatore 4 e' arrivato alla casella 1.
+Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
+Giocatore 4 e' arrivato alla casella 8.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 21-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 4 + 4 = 8.
+Giocatore 1 e' arrivato alla casella 12.
+La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 1 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
+Giocatore 1 e' arrivato alla casella 18.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 22-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 1 + 4 = 5.
+Giocatore 2 e' arrivato alla casella 14.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 22-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
+Giocatore 3 e' arrivato alla casella 6.
+La casella e' di proprieta' di 2 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 22-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 1 = 4.
+Giocatore 4 e' arrivato alla casella 12.
+La casella e' di proprieta' di 3 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 22-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 6 + 3 = 9.
+Giocatore 1 e' arrivato alla casella 27.
+Giocatore 1 ha migliorato una casa in albergo sul terreno 27.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 23-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 2 = 6.
+Giocatore 2 e' arrivato alla casella 20.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 23-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
+Giocatore 3 e' arrivato alla casella 13.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 23-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 2 = 4.
+Giocatore 4 e' arrivato alla casella 16.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 1 + 1 = 2.
+Giocatore 4 e' arrivato alla casella 18.
+Giocatore 4 ha costruito una casa sul terreno 18.
+Giocatore 4 ha ottenuto un lancio doppio e svolgera' un altro turno.
+Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 4 = 7.
+Giocatore 4 e' arrivato alla casella 25.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 23-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 1 + 3 = 4.
+Giocatore 1 e' arrivato alla casella 3.
+Giocatore 1 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 1 ha migliorato una casa in albergo sul terreno 3.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 24-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 5 + 2 = 7.
+Giocatore 2 e' arrivato alla casella 27.
+Giocatore 2 ha pagato 8 fiorini a giocatore 1 per pernottamento in Hotel nella casella 27.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 24-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 4 + 6 = 10.
+Giocatore 3 e' arrivato alla casella 23.
+La casella e' di proprieta' di 4 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 24-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 2 + 5 = 7.
+Giocatore 4 e' arrivato alla casella 4.
+Giocatore 4 e' passato dal via e ha ritirato 20 fiorini.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 24-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 2 + 4 = 6.
+Giocatore 1 e' arrivato alla casella 9.
+Giocatore 1 ha costruito una casa sul terreno 9.
+Giocatore 1 ha finito il turno.
+|-------------------------------------Giocatore 2, Turno 25-------------------------------------|
+Giocatore 2 ha tirato i dadi ottenendo un valore di 4 + 3 = 7.
+Giocatore 2 e' arrivato alla casella 6.
+Giocatore 2 e' passato dal via e ha ritirato 20 fiorini.
+Giocatore 2 ha costruito una casa sul terreno 6.
+Giocatore 2 ha finito il turno.
+|-------------------------------------Giocatore 3, Turno 25-------------------------------------|
+Giocatore 3 ha tirato i dadi ottenendo un valore di 6 + 4 = 10.
+Giocatore 3 e' arrivato alla casella 5.
+Giocatore 3 e' passato dal via e ha ritirato 20 fiorini.
+La casella e' di proprieta' di 1 ma, senza alcun edificio, il transito e' gratuito.
+Giocatore 3 ha finito il turno.
+|-------------------------------------Giocatore 4, Turno 25-------------------------------------|
+Giocatore 4 ha tirato i dadi ottenendo un valore di 3 + 6 = 9.
+Giocatore 4 e' arrivato alla casella 13.
+Giocatore 4 ha acquistato il terreno 13.
+Giocatore 4 ha finito il turno.
+|-------------------------------------Giocatore 1, Turno 25-------------------------------------|
+Giocatore 1 ha tirato i dadi ottenendo un valore di 6 + 5 = 11.
+Giocatore 1 e' arrivato alla casella 20.
+Giocatore 1 ha pagato 4 fiorini a giocatore 2 per pernottamento in una casa nella casella 20.
+Giocatore 1 ha finito il turno.
+Giocatore 3 ha vinto la partita.
+Giocatore 1: 65 fiorini.
+Giocatore 2: 188 fiorini.
+Giocatore 3: 240 fiorini.
+Giocatore 4: 166 fiorini.
