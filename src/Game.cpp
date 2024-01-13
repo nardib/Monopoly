@@ -364,7 +364,7 @@ void Game::game()
                         }
                         else
                         {
-                            std::cout<<"Giocatore "<< j+1<< " non possiede proprieta'.\n";
+                            std::cout<<"Giocatore "<< j+1<<" (" <<return_player(j+1)->budget() <<" fiorini)" << " non possiede proprieta'.\n";
                         }
                     }
                     std::cin.ignore();
