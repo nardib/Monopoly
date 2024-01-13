@@ -28,7 +28,6 @@ std::vector<int> Game::player_order()
         {
             ++j;
         }
-
         // If there are ties, resolve them
         if (j > i) 
         {
@@ -39,7 +38,6 @@ std::vector<int> Game::player_order()
                 std::cout << "Giocatore " << tied_players.back().first << "  ha tirato i dadi ottenendo un valore di  " << tied_players.back().second.first << " + " << tied_players.back().second.second << " = " << tied_players.back().second.first + tied_players.back().second.second << ".\n";
                 out<< "Giocatore " << tied_players.back().first << "  ha tirato i dadi ottenendo un valore di  " << tied_players.back().second.first << " + " << tied_players.back().second.second << " = " << tied_players.back().second.first + tied_players.back().second.second << ".\n";
             }
-
             // Keep re-throwing dices until the tie is resolved
             bool tie_resolved = false;
             while (!tie_resolved) 
@@ -48,7 +46,6 @@ std::vector<int> Game::player_order()
                 {
                     return a.second.first + a.second.second > b.second.first + b.second.second;
                 });
-
                 tie_resolved = true;
                 for (int k = 0; k < tied_players.size() - 1; ++k) 
                 {
@@ -65,7 +62,6 @@ std::vector<int> Game::player_order()
                     }
                 }
             }
-
             for (int k = 0; k < tied_players.size(); ++k) 
             {
                 order[i + k] = tied_players[k].first;
@@ -77,7 +73,6 @@ std::vector<int> Game::player_order()
         }
         i = j + 1;
     }
-
     return order;
 }
 
