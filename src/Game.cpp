@@ -10,7 +10,6 @@ std::vector<int> Game::player_order()
     {
         players[i] = {i + 1, throw_dices()};
         std::cout << "Giocatore " << players[i].first << "  ha tirato i dadi ottenendo un valore di  " << players[i].second.first << " + " << players[i].second.second << " = " << players[i].second.first + players[i].second.second << ".\n";
-        out<< "Giocatore " << players[i].first << "  ha tirato i dadi ottenendo un valore di  " << players[i].second.first << " + " << players[i].second.second << " = " << players[i].second.first + players[i].second.second << ".\n";
     }
 
     std::sort(players.begin(), players.end(), [](const std::pair<int, std::pair<int, int>>& a, const std::pair<int, std::pair<int, int>>& b) 
@@ -36,7 +35,6 @@ std::vector<int> Game::player_order()
             {
                 tied_players.push_back({players[k].first, throw_dices()});
                 std::cout << "Giocatore " << tied_players.back().first << "  ha tirato i dadi ottenendo un valore di  " << tied_players.back().second.first << " + " << tied_players.back().second.second << " = " << tied_players.back().second.first + tied_players.back().second.second << ".\n";
-                out<< "Giocatore " << tied_players.back().first << "  ha tirato i dadi ottenendo un valore di  " << tied_players.back().second.first << " + " << tied_players.back().second.second << " = " << tied_players.back().second.first + tied_players.back().second.second << ".\n";
             }
             // Keep re-throwing dices until the tie is resolved
             bool tie_resolved = false;
@@ -54,9 +52,7 @@ std::vector<int> Game::player_order()
                         tied_players[k].second = throw_dices();
                         tied_players[k + 1].second = throw_dices();
                         std::cout << "Giocatore " << tied_players[k].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k].second.first << " + " << tied_players[k].second.second << " = " << tied_players[k].second.first + tied_players[k].second.second << ".\n";
-                        out<< "Giocatore " << tied_players[k].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k].second.first << " + " << tied_players[k].second.second << " = " << tied_players[k].second.first + tied_players[k].second.second << ".\n";
                         std::cout << "Giocatore " << tied_players[k + 1].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k + 1].second.first << " + " << tied_players[k + 1].second.second << " = " << tied_players[k + 1].second.first + tied_players[k + 1].second.second << ".\n";
-                        out<< "Giocatore " << tied_players[k + 1].first << "  ha tirato i dadi ottenendo un valore di  " << tied_players[k + 1].second.first << " + " << tied_players[k + 1].second.second << " = " << tied_players[k + 1].second.first + tied_players[k + 1].second.second << ".\n";
                         tie_resolved = false;
                         break;
                     }
