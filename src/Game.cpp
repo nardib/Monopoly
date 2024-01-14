@@ -367,7 +367,7 @@ void Game::game()
                 }
                 if(cmd=="end")  //If the user wants to end the game
                 {
-                    turn_count=101;
+                    turn_count=turn_limit+1;
                 }
                 if(cmd=="")
                 {}
@@ -376,7 +376,7 @@ void Game::game()
             {
                 i==0;
             }
-            if(turn_count>100)  //Ends the game automatically after a set number of turns
+            if(turn_count>turn_limit)  //Ends the game automatically after a set number of turns
             {
                 int richest = 0;
                 int winner = 0;

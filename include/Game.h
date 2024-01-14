@@ -14,7 +14,7 @@ class Game
     public:
      
      //Constructor
-     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo},out{"../Logs/Log.txt"}{};
+     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo, int turns):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo},turn_limit{turns},out{"../Logs/Log.txt"}{};
 
      //Function to determine the order of players
      std::vector<int> player_order();
@@ -60,6 +60,8 @@ class Game
      Player *p2;
      Player *p3;
      Player *p4;
+     //The number of turns
+     int turn_limit;
      //The dices
      int dice1;
      int dice2;
