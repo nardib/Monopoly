@@ -21,9 +21,9 @@ int main (int argc, char *argv[])
 	while(turns < 1 || std::cin.fail())		//Check if the input is correct
 	{
 		std::cout << "Inserisci un numero maggiore di 0: ";
-		std::cin.clear();
-		std::cin.ignore(10000, '\n');
 		std::cin >> turns;
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');	
 	}
 	Board b {8, 10, 6};			//Create the board
 	ComputerPlayer p2(2, &b);
