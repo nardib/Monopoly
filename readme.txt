@@ -47,4 +47,4 @@ Marco Spolverato 2032569: Ho avuto, nella funzione player_order(), delle diffico
                           gestire al meglio la situazione in cui avvengono nuovi pareggi nel risolvere quelli precedenti.
                           Ad esempio, se 3 giocatori ottengono 4, poi 2 di essi ottengono 9 e uno 5, e nel risolvere il pareggio uno dei 2 ottiene 5, avverrà lo spareggio
                           tra esso e il giocatore che aveva ottenuto 5.
-                          Pareggi con valori diversi (due giocatori ottengono 5 e due giocatori ottengono 7) invecec, vengono risolti separatamente e mantenendo l'ordine.
+                          Pareggi con valori diversi (due giocatori ottengono 5 e due giocatori ottengono 7) invece, vengono risolti separatamente e mantenendo l'ordine.

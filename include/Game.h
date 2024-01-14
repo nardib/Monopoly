@@ -14,7 +14,8 @@ class Game
     public:
      
      //Constructor
-     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo, int turns):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo},turn_limit{turns},out{"../Logs/Log.txt"}{};
+     //the number of turns is the number given as argument * 4 (one turn for every player)
+     Game(Player *pl1, Player *pl2, Player *pl3, Player *pl4, Board *bo, int turns):p1{pl1},p2{pl2},p3{pl3},p4{pl4},b{bo},turn_limit{turns*4},out{"../Logs/Log.txt"}{};
 
      //Function to determine the order of players
      std::vector<int> player_order();
